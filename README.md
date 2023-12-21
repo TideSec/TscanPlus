@@ -89,7 +89,11 @@ IP支持换行分割，支持如下格式：192.168.1.1、192.168.1.1/24、192.1
 
 <div align=center><img src=images/image-20231221144525144.png width=80% ></div>
 
-<video src="images/TscanPlus.mp4"></video>
+<video controls="controls" loop="loop" autoplay="autoplay"> 
+    <source src="images/TscanPlus.mp4" type="video/mp4">
+</video>
+
+
 
 **【高级配置】**
 
