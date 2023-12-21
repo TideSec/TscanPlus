@@ -35,7 +35,7 @@
 
 
 
-<div align=center style="font-weight:bold;color:red">免责声明&使用许可</div>
+<div align=center style="font-size: 12px; color: red; font-weight: bold;">免责声明&使用许可</div>
 
 1、本工具禁止进行未授权商业用途，**禁止二次开发后进行未授权商业用途**。
 
