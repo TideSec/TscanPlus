@@ -9,6 +9,8 @@
 
 **【辅助功能】** 编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成等。
 
+https://github.com/TideSec/TscanPlus/assets/46297163/bf3d2bb9-9948-49ce-9cbb-db032cb4beba
+
 在2019年就用Python写过指纹识别工具——[TideFinger](https://github.com/TideSec/TideFinger)，并实现了一个免费在线的指纹检测平台——潮汐指纹[http://finger.tidesec.com](http://finger.tidesec.com)，目前已积累用户3万余人，每日指纹识别约2000余次，2023年初又基于Go语言开发了Go版的[TideFinger_Go](https://github.com/TideSec/TideFinger_Go)，在web指纹和服务指纹的识别方面积累了一些经验。后来我们团队内部大佬基于Fscan开发了一个Tscan，主要是用于内部的POC收集整理并形成自动化武器库，可基于指纹识别结果对poc进行精准检测。TscanPlus就是以指纹和Poc为根基，扩展了多项自动化功能，可大大提高安全运维和安全检测的效率，方便网络安全从业者使用。
 
 **【特色功能】**
@@ -53,9 +55,11 @@ Github下载：https://github.com/TideSec/Tscanplus
 
 知识星球：【剑影安全实验室】见下方二维码（**更多、更新版本**）
 
-软件基于Wails开发，可支持Windows/Mac/Linux等系统，下载即可使用。Windows程序使用了Upx压缩，杀毒软件可能会报病毒，请自查。
+软件基于Wails开发，可支持Windows/Mac/Linux等系统，下载即可使用。
 
-但由于MacOs的一些安全设置，可能会出现个别问题，如报错、闪退等情况，详见最下方FAQ。
+由于MacOs的一些安全设置，可能会出现个别问题，如报错、闪退等情况，详见最下方FAQ。
+
+Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)，默认情况下，Windows11和win2012会安装它，但有些旧机器(如Win2k8)不会，如机器没有webview2环境，程序会引导下载安装webview2。另外Windows程序使用了Upx压缩，杀毒软件可能会报病毒，请自查。
 
 #### 2、Welcome
 
@@ -301,9 +305,15 @@ https://sysin.org/blog/macos-if-crashes-when-opening/    【macOS 提示：“�
 
 `sudo codesign --sign - --force --deep TscanPlus_darwin_amd64_v1.0.app`
 
-**2、Windows杀软报病毒问题**
+**2、Windows依赖WebView2环境**
+
+Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)，而默认情况下Windows11和win2012会安装，但有些旧机器(如Win2k8)不会，如机器没有webview2环境，程序会引导下载安装webview2。也可自行手动下载：https://developer.microsoft.com/en-us/microsoft-edge/webview2。
+
+**3、Windows杀软报病毒问题**
 
 程序使用Go开发，Windows版本使用upx进行了加壳，杀软可能会报毒，请自行排查。
 
-**3、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
+
+
+**4、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
 
