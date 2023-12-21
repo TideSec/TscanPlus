@@ -51,7 +51,7 @@
 
 Github下载：https://github.com/TideSec/Tscanplus   
 
-知识星球：【Tide安全攻防】见下方二维码（更多、更新版本）
+知识星球：【剑影安全实验室】见下方二维码（**更多、更新版本**）
 
 软件基于Wails开发，可支持Windows/Mac/Linux等系统，下载即可使用。Windows程序使用了Upx压缩，杀毒软件可能会报病毒，请自查。
 
@@ -141,9 +141,11 @@ TscanPlus内置了部分POC，并进行了Level分类，Level1是最常见、使
 
 URL可导入txt文件，也可自行输入，必须是HTTP/HTTPS为前缀的URL地址。
 
-POC选项可指定外部POC文件或POC文件夹，在后面输入POC的绝对路径，如C:\POC。
-
 比较重要的一个选项是“POC匹配指纹”，默认开启这个选项，这时会根据指纹信息匹配POC，如匹配不到POC则不检测。关闭该选项后，会对所有选择的POC进行测试。
+
+POC选项可指定外部POC文件或POC文件夹，在后面输入POC的绝对路径，如C:\POC，但导入的POC无法和指纹进行匹配，默认会把导入的POC全跑一遍。
+
+外部POC可支持Xray或Xray或同样格式的POC，POC编写可参考：https://poc.xray.cool/ 或 https://phith0n.github.io/xray-poc-generation/
 
 **【扫描结果】**
 
