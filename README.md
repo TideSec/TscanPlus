@@ -5,9 +5,9 @@
 ## TscanPlus
 一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。
 
-**【主要功能】**端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、域名探测、网络空探等。
+**【主要功能】** 端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、域名探测、网络空探等。
 
-**【辅助功能】**编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成等。
+**【辅助功能】** 编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成等。
 
 在2019年就用Python写过指纹识别工具——[TideFinger](https://github.com/TideSec/TideFinger)，并实现了一个免费在线的指纹检测平台——潮汐指纹[http://finger.tidesec.com](http://finger.tidesec.com)，目前已积累用户3万余人，每日指纹识别约2000余次，2023年初又基于Go语言开发了Go版的[TideFinger_Go](https://github.com/TideSec/TideFinger_Go)，在web指纹和服务指纹的识别方面积累了一些经验。后来我们团队内部大佬基于Fscan开发了一个Tscan，主要是用于内部的POC收集整理并形成自动化武器库，可基于指纹识别结果对poc进行精准检测。TscanPlus就是以指纹和Poc为根基，扩展了多项自动化功能，可大大提高安全运维和安全检测的效率，方便网络安全从业者使用。
 
@@ -38,8 +38,11 @@
 <div align=center style="font-weight:bold;color:red">免责声明&使用许可</div>
 
 1、本工具禁止进行未授权商业用途，**禁止二次开发后进行未授权商业用途**。
+
 2、本工具仅面向合法授权的企业安全建设行为，在使用本工具进行检测时，您应**确保该行为符合当地的法律法规**，并且已经**取得了足够的授权**。
+
 3、如您在使用本工具的过程中存在任何**非法行为**，您需自行承担相应后果，我们将不承担任何法律及连带责任。
+
 4、在安装并使用本工具前，请**务必审慎阅读、充分理解各条款内容，并接受本协议所有条款，否则，请不要使用本工具**。您的使用行为或者您以其他任何明示或者默示方式表示接受本协议的，即视为您已阅读并同意本协议的约束。
 
 ### 软件使用
@@ -86,7 +89,7 @@ IP支持换行分割，支持如下格式：192.168.1.1、192.168.1.1/24、192.1
 
 <div align=center><img src=images/image-20231221144525144.png width=80% ></div>
 
-<div align=center><video src="images/TscanPlus.mp4"></video>
+<div align=center><video src="images/TscanPlus.mp4"></video></div>
 
 
 **【高级配置】**
@@ -194,7 +197,7 @@ TscanPlus内置各类反弹shell命令85条、MSF生成命令21条、CS免杀上
 
 CS上线配置CS Payload地址后，即可生成相应代码。
 
-<img src="/Users/xysoul/Library/Application Support/typora-user-images/image-20231221141838825.png" alt="image-20231221141838825" style="zoom:40%;" />
+<div align=center><img src=images/image-20231221141838825.png width=80% ></div>
 
 #### 9、红队命令
 
