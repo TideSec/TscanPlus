@@ -1,5 +1,5 @@
 
-<div align=center><img src=images/TscanPlus.png width=30% ></div>
+<div align=center><img src=images/TscanPlus.png width=50% ></div>
 
 
 ## TscanPlus
