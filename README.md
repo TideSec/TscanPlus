@@ -59,7 +59,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 ### 更新日志
 
-感谢各位师傅提出的宝贵修改建议和诸多bug！
+感谢各位师傅提出的宝贵修改建议和诸多bug！所有提过bug或建议的小伙伴会被拉入工具交流群，并享受新版本新功能第一时间尝鲜及永久VIP服务！
 
 v1.2版 【2024.01.10】 
 
@@ -129,7 +129,7 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 
 #### 2、Welcome
 
-软件运行后，需审慎阅读、充分理解**《免责声明&使用许可》**内容，并在Welcome页面勾选**“我同意所有条款”**，之后方可使用本软件。
+软件运行后，需审慎阅读、充分理解 **《免责声明&使用许可》** 内容，并在Welcome页面勾选 **“我同意所有条款”** ，之后方可使用本软件。
 
 
 <div align=center><img src=images/image-20231221131344810.png width=80% ></div>
@@ -141,6 +141,7 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 **【任务配置】**
 
 IP支持换行分割，支持如下格式：192.168.1.1、192.168.1.1/24、192.168.1.1-255、192.168.1.1,192.168.1.3
+
 排除IP可在可支持输入的IP格式前加!： !192.168.1.1/26
 
 可选择端口策略、是否启用Ping扫描、是否同步密码破解、是否同步POC检测、是否开启代理，配置任务后可开启扫描。
