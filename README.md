@@ -344,13 +344,13 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 
 提供了三种密码生成方式，包括社工字典生成、组织方式和枚举模式。可根据需求不同来生成更有针对性的字典文件。
 
-![01](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/01.png)
+<div align=center><img src=images/01.png width=80% ></div>
 
 **【密码查询】**
 
 内置了10733条常见设备和产品的默认账号密码，可直接进行查询并导出。
 
-![02](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/02.png)
+<div align=center><img src=images/02.png width=80% ></div>
 
 **【提权辅助】**
 
