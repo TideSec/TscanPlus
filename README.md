@@ -412,8 +412,6 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 
 根据windows的tasklist信息，匹配杀软进程，内置1042条杀软识别规则。返回进程名称、进程ID、杀软名称等信息。
 
-![image-20240219142055021](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20240219142055021.png)
-
 <div align=center><img src=images/image-20231221142616501.png width=80% ></div>
 
 #####  **【导出功能】**
