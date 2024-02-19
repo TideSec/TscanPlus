@@ -288,7 +288,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 #### 8、空间测绘
 
-为使信息搜集更快捷方便，TscanPlus集成了多个网络空间测绘接口，包括fofa,hunter,quake,shodan,censys,zoomeye,threatbook,binaryedge,virustotal等9个主流空探API，可根据域名、IP地址、端口、应用、服务等进行检索，并对各网络空探结果进行去重整合。
+为使信息搜集更快捷方便，TscanPlus集成了多个网络空间测绘接口，包括鹰图**Hunter、Fofa、shodan、360 Quake、Zoomeye 钟馗之眼、Censys、微步在线ThreatBook、BinaryEdge、VirusTotal**等9个主流空探API，可根据域名、IP地址、端口、应用、服务等进行检索，并对各网络空探结果进行去重整合。
 
 **【任务配置】**
 
