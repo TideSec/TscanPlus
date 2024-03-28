@@ -89,7 +89,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 * [致谢](#致谢)
 * [FAQ](#FAQ)
 
-# 更新日志
+### 更新日志
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
@@ -211,9 +211,9 @@ v0.0版 【2023.10.10】 TscanPlus架构选择及功能初步规划
 
 
 
-# 软件使用
+### 软件使用
 
-## 1、软件下载及更新
+#### 1、软件下载及更新
 
 Github下载：https://github.com/TideSec/Tscanplus   
 
