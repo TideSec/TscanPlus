@@ -1,5 +1,4 @@
 
-
 <div align=center><img src=images/TscanPlus.png width=50% ></div>
 
 
@@ -53,43 +52,44 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 4、在安装并使用本工具前，请**务必审慎阅读、充分理解各条款内容，并接受本协议所有条款，否则，请不要使用本工具**。您的使用行为或者您以其他任何明示或者默示方式表示接受本协议的，即视为您已阅读并同意本协议的约束。
 
-### 目录
 
-&emsp;&emsp;<a href="#2">更新日志</a>  
-&emsp;&emsp;<a href="#3">软件使用</a>  
-&emsp;&emsp;&emsp;<a href="#4">1、软件下载及更新</a>  
-&emsp;&emsp;&emsp;<a href="#5">2、Welcome</a>  
-&emsp;&emsp;&emsp;<a href="#6"> 3、项目管理</a>  
-&emsp;&emsp;&emsp;<a href="#7">4、端口扫描</a>  
-&emsp;&emsp;&emsp;<a href="#8">5、URL探测</a>  
-&emsp;&emsp;&emsp;<a href="#9">6、域名枚举</a>  
-&emsp;&emsp;&emsp;<a href="#10">7、POC检测</a>  
-&emsp;&emsp;&emsp;<a href="#11">8、密码破解</a>  
-&emsp;&emsp;&emsp;<a href="#12">9、空间测绘</a>  
-&emsp;&emsp;&emsp;<a href="#13">10、目录枚举</a>  
-&emsp;&emsp;&emsp;<a href="#14">11、UrlFinder</a>  
-&emsp;&emsp;&emsp;<a href="#15">12、上线反弹</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#16">**【反弹shell】**</a>  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#17">**【CS上线】**</a>  
-&emsp;&emsp;&emsp;<a href="#18">13、红队命令</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#19">**【红队命令】**</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#20">**【下载命令】**</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#21"> **【java编码】**</a>  
-&emsp;&emsp;&emsp;<a href="#22">14、辅助工具</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#23">**【密码生成】**</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#24">**【密码查询】**</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#25">**【提权辅助】**</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#26">**【杀软查询】**</a>  
-&emsp;&emsp;&emsp;<a href="#27">15、其他功能</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#28"> **【导出功能】**</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#29">**【数据库管理】**</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#30">【配置管理】</a>  
-&emsp;&emsp;&emsp;&emsp;<a href="#31">【主题设置】</a>  
-&emsp;&emsp;<a href="#32">软件下载</a>  
-&emsp;&emsp;<a href="#33">致谢</a>  
-&emsp;&emsp;<a href="#34">FAQ</a>  
+## 目录
 
-### <a name="2">更新日志</a>
+* [更新日志](#更新日志)
+* [软件使用](#软件使用)
+    * [软件下载及更新](#软件下载及更新)
+    * [Welcome](#Welcome)
+    * [项目管理](#项目管理)
+    * [端口扫描](#端口扫描)
+    * [URL探测](#URL探测)
+    * [域名枚举](#域名枚举)
+    * [POC检测](#POC检测)
+    * [密码破解](#密码破解)
+    * [空间测绘](#空间测绘)
+    * [目录枚举](#目录枚举)
+    * [UrlFinder](#UrlFinder)
+    * [上线反弹](#上线反弹)
+        * 【反弹shell】
+        * 【CS上线】
+    * [红队命令](#红队命令)
+        * 【红队命令】
+        * 【下载命令】
+        * 【java编码】
+    * [辅助工具](#辅助工具)
+        * 【密码生成】
+        * 【密码查询】
+        * 【提权辅助】
+        * 【杀软查询】
+    * [其他功能](#其他功能)
+        * 【导出功能】
+        * 【数据库管理】
+        * 【配置管理】
+        * 【主题设置】
+* [软件下载](#软件下载)
+* [致谢](#致谢)
+* [FAQ](#FAQ)
+
+### 更新日志
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
@@ -211,9 +211,9 @@ v0.0版 【2023.10.10】 TscanPlus架构选择及功能初步规划
 
 
 
-### <a name="3">软件使用</a>
+### 软件使用
 
-#### <a name="4">1、软件下载及更新</a>
+#### 1、软件下载及更新
 
 Github下载：https://github.com/TideSec/Tscanplus   
 
@@ -225,13 +225,13 @@ Github下载：https://github.com/TideSec/Tscanplus
 
 Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)，默认情况下，Windows11和win2012会安装它，但有些旧机器(如Win2k8)不会，如机器没有webview2环境，程序会引导下载安装webview2。另外Windows程序使用了Upx压缩，杀毒软件可能会报病毒，请自查。
 
-#### <a name="5">2、Welcome</a>
+#### 2、Welcome
 
 软件运行后，需审慎阅读、充分理解 **《免责声明&使用许可》** 内容，并在Welcome页面勾选 **“我同意所有条款”** ，之后方可使用本软件。
 
 <div align=center><img src=images/image-20240327171101515.png width=80% ></div>
 
-#### <a name="6"> 3、项目管理</a>
+####  3、项目管理
 
 项目管理功能是把各功能进行流程整合，用户可根据自己的使用场景设计项目功能，完美融合了"资产测绘"、"子域名枚举"、"IP端口扫描"、"密码破解"、"POC检测"、"URL扫描"、"目录探测"、"UrlFinder"等功能。项目执行结果会存储到相应项目数据库中，方便后续查询和使用。
 
@@ -265,7 +265,7 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 
 <div align=center><img src=images/image-20240327160956342.png  width=80% ></div>
 
-#### <a name="7">4、端口扫描</a>
+#### 4、端口扫描
 
 对目标IP进行存活探测、端口开放探测、端口服务识别、Banner识别等，可识别100余种服务和协议。
 
@@ -313,7 +313,7 @@ Socks5代理格式：socks5://10.10.10.10:8081  或 socks5://user:pass@10.10.10.
 
 <div align=center><img src=images/image-20231221133246236.png width=80% ></div>
 
-#### <a name="8">5、URL探测</a>
+#### 5、URL探测
 
 TscanPlus目前整合指纹2.6W余条，经多次优化，有效提高了资产发现的协程并发效率，对1万个web系统进行指纹识别仅需8-10分钟，在效率和指纹覆盖面方面应该是目前较高的了。
 
@@ -334,7 +334,7 @@ https://www.abc.com:8443
 
 <div align=center><img src=images/image-20231221133907830.png width=80% ></div>
 
-#### <a name="9">6、域名枚举</a>
+#### 6、域名枚举
 
 在域名枚举方面TscanPlus集成了多种功能，可以使用字典枚举，也可以使用多个免费接口进行查询。
 
@@ -357,7 +357,7 @@ tidesec.com.cn
 
 <div align=center><img src=images/image-20240110164454188.png width=80% ></div>
 
-#### <a name="10">7、POC检测</a>
+#### 7、POC检测
 
 TscanPlus内置了部分POC，并进行了Level分类，Level1是最常见、使用频率最高的POC，Level2是较通用的POC，Level3为不太常见POC。
 
@@ -379,7 +379,7 @@ POC选项可指定外部POC文件或POC文件夹，在后面输入POC的绝对�
 
 <div align=center><img src=images/image-20231221135024558.png width=80% ></div>
 
-#### <a name="11">8、密码破解</a>
+#### 8、密码破解
 
 TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网弱口令进行排查，为提高检测效率，优选并精简每个服务的用户名和密码字典。覆盖的服务包括：SSH,RDP,SMB,MYSQL,SQLServer,Oracle,MongoDB,Redis,PostgreSQL,MemCached,Elasticsearch,FTP,Telnet,WinRM,VNC,SVN,Tomcat,WebLogic,Jboss,Zookeeper,Socks5,SNMP,WMI,LDAP,LDAPS,SMTP,POP3,IMAP,SMTP_SSL,IMAP_SSL,POP3_SSL,RouterOS,WebBasicAuth,Webdav,CobaltStrike等。
 
@@ -395,7 +395,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20231221140432486.png width=80% ></div>
 
-#### <a name="12">9、空间测绘</a>
+#### 9、空间测绘
 
 为使信息搜集更快捷方便，TscanPlus集成了多个网络空间测绘接口，包括鹰图**Hunter、Fofa、shodan、360 Quake、Zoomeye 钟馗之眼、Censys、微步在线ThreatBook、BinaryEdge、VirusTotal**等9个主流空探API，可根据域名、IP地址、端口、应用、服务等进行检索，并对各网络空探结果进行去重整合。
 
@@ -419,7 +419,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20240327164931978.png width=80% ></div>
 
-#### <a name="13">10、目录枚举</a>
+#### 10、目录枚举
 
 目录枚举主要是对web站点进行目录枚举，支持字典模式、Fuzz模式、存活探测等，支持HEAD/GET方法，默认使用HEAD方法。
 
@@ -439,7 +439,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20240219111318207.png width=80% ></div>
 
-#### <a name="14">11、UrlFinder</a>
+#### 11、UrlFinder
 
 URLFinder功能可对目标信息进行快速、全面的提取，可用于分析页面中的js与url，查找隐藏在其中的敏感信息或未授权api接口。
 
@@ -463,33 +463,33 @@ URLFinder功能可对目标信息进行快速、全面的提取，可用于分�
 
 <div align=center><img src=images/image-20240327163203001.png  width=80% ></div>
 
-#### <a name="15">12、上线反弹</a>
+#### 12、上线反弹
 
 TscanPlus内置各类反弹shell命令85条、MSF生成命令21条、CS免杀上线命令等，可根据shell类型、操作系统类型、监听类型自动生成代码。
 
-##### <a name="16">**【反弹shell】**</a>
+##### **【反弹shell】**
 
 可设置IP/PORT、listener类型、shell类型、是否编码，选择你想要的命令后，即可生成响应代码。
 
 <div align=center><img src=images/image-20231221141826648.png width=80% ></div>
 
-##### <a name="17">**【CS上线】**</a>
+##### **【CS上线】**
 
 CS上线配置CS Payload地址后，即可生成相应代码。
 
 <div align=center><img src=images/image-20231221141838825.png width=80% ></div>
 
-#### <a name="18">13、红队命令</a>
+#### 13、红队命令
 
 TscanPlus内置常用红队命令，包括Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网命令18类、下载命令31条。
 
-##### <a name="19">**【红队命令】**</a>
+##### **【红队命令】**
 
 Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网命令18类。
 
 <div align=center><img src=images/image-20231221142158055.png width=80% ></div>
 
-##### <a name="20">**【下载命令】**</a>
+##### **【下载命令】**
 
 内置常见下载命令31条，基本能覆盖内网渗透能用到的下载方法。
 
@@ -497,7 +497,7 @@ Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网�
 
 <div align=center><img src=images/image-20231221142332714.png width=80% ></div>
 
-##### <a name="21"> **【java编码】**</a>
+#####  **【java编码】**
 
 有时，通过 `Runtime.getRuntime().exec()` 执行命令有效负载会导致失败。使用 WebShell，反序列化利用或通过其他媒介时，可能会发生这种情况。
 
@@ -523,37 +523,37 @@ curl http://www.google.com/key.txt -o key.txt
 
 <div align=center><img src=images/image-20240111143548211.png width=80% ></div>
 
-#### <a name="22">14、辅助工具</a>
+#### 14、辅助工具
 
 TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密、字典生成等模块还在完善，后续会持续更新。
 
-##### <a name="23">**【密码生成】**</a>
+##### **【密码生成】**
 
 提供了三种密码生成方式，包括社工字典生成、组织方式和枚举模式。可根据需求不同来生成更有针对性的字典文件。
 
 <div align=center><img src=images/01.png width=80% ></div>
 
-##### <a name="24">**【密码查询】**</a>
+##### **【密码查询】**
 
 内置了10733条常见设备和产品的默认账号密码，可直接进行查询并导出。
 
 <div align=center><img src=images/02.png width=80% ></div>
 
-##### <a name="25">**【提权辅助】**</a>
+##### **【提权辅助】**
 
 根据systeminfo信息查询未修补的漏洞信息，返回漏洞微软编号、补丁编号、漏洞描述、影响系统等信息。
 
 <div align=center><img src=images/image-20231221142455293.png width=80% ></div>
 
-##### <a name="26">**【杀软查询】**</a>
+##### **【杀软查询】**
 
 根据windows的tasklist信息，匹配杀软进程，内置1042条杀软识别规则。返回进程名称、进程ID、杀软名称等信息。
 
 <div align=center><img src=images/image-20231221142616501.png width=80% ></div>
 
-#### <a name="27">15、其他功能</a>
+#### 15、其他功能
 
-##### <a name="28"> **【导出功能】**</a>
+#####  **【导出功能】**
 
 1、在所有功能模块中，新增了导出excel功能，默认会保存在程序根目录下。
 
@@ -567,13 +567,13 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 
 <div align=center><img src=images/image-20240111144635519.png width=80% ></div>
 
-##### <a name="29">**【数据库管理】**</a>
+##### **【数据库管理】**
 
 可对所有数据进行持久存储和使用。默认DB文件会在config文件下生成。
 
 <div align=center><img src=images/image-20240327165547238.png  width=80% ></div>
 
-##### <a name="30">【配置管理】</a>
+##### 【配置管理】
 
 对各功能配置参数写入配置文件，参数修改后只要执行一次相应功能就会写入配置文件，下次无需再次修改。
 
@@ -583,7 +583,7 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 
 <div align=center><img src=images/image-20240327165814782.png  width=80% ></div>
 
-##### <a name="31">【主题设置】</a>
+##### 【主题设置】
 
 增加系统主题设定，在任意页面打开"高级配置"，可对系统主题进行配置，选择深色或浅色模式。（该功能基于wails框架，mac兼容较好，在windows部分系统上应用可能存在问题）
 
@@ -593,7 +593,7 @@ Mac系统下的的深色和浅色主题对比。
 
 <div align=center><img src=images/image-20240327172657687.png  width=80% ></div>
 
-### <a name="32">软件下载</a>
+### 软件下载
 
 Github下载：https://github.com/TideSec/Tscanplus   知识星球：下方二维码（更多、更新版本）
 
@@ -613,7 +613,7 @@ Github下载：https://github.com/TideSec/Tscanplus   知识星球：下方二�
 
 
 
-### <a name="33">致谢</a>
+### 致谢
 
 工具开发中参考了很多知名的Go检测工具和指纹识别软件，在此一并感谢。
 
@@ -623,7 +623,7 @@ Github下载：https://github.com/TideSec/Tscanplus   知识星球：下方二�
 - ServerScan项目：https://github.com/Adminisme/ServerScan 
 - Dirsearch项目：https://github.com/maurosoria/dirsearch 
 
-### <a name="34">FAQ</a>
+### FAQ
 
 **1、MacOS安装问题**
 
