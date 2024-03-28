@@ -16,7 +16,6 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 </video>
 
 
-
 在2019年就用Python写过指纹识别工具——[TideFinger](https://github.com/TideSec/TideFinger)，并实现了一个免费在线的指纹检测平台——潮汐指纹[http://finger.tidesec.com](http://finger.tidesec.com)，目前已积累用户3万余人，每日指纹识别约2000余次，2023年初又基于Go语言开发了Go版的[TideFinger_Go](https://github.com/TideSec/TideFinger_Go)，在web指纹和服务指纹的识别方面积累了一些经验。后来我们团队内部大佬基于Fscan开发了一个Tscan，主要是用于内部的POC收集整理并形成自动化武器库，可基于指纹识别结果对poc进行精准检测。TscanPlus就是以指纹和Poc为根基，扩展了多项自动化功能，可大大提高安全运维和安全检测的效率，方便网络安全从业者使用。
 
 **【特色功能】**
@@ -54,12 +53,89 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 4、在安装并使用本工具前，请**务必审慎阅读、充分理解各条款内容，并接受本协议所有条款，否则，请不要使用本工具**。您的使用行为或者您以其他任何明示或者默示方式表示接受本协议的，即视为您已阅读并同意本协议的约束。
 
 
+## 目录
 
+* [更新日志](#更新日志)
+* [软件使用](#软件使用)
+    * [软件下载及更新](#软件下载及更新)
+    * [Welcome](#Welcome)
+    * [项目管理](#项目管理)
+    * [端口扫描](#端口扫描)
+    * [URL探测](#URL探测)
+    * [域名枚举](#域名枚举)
+    * [POC检测](#POC检测)
+    * [密码破解](#密码破解)
+    * [空间测绘](#空间测绘)
+    * [目录枚举](#目录枚举)
+    * [UrlFinder](#UrlFinder)
+    * [上线反弹](#上线反弹)
+        *【反弹shell】
+        *【CS上线】
+    * [红队命令](#红队命令)
+        *【红队命令】
+        *【下载命令】
+        *【java编码】
+    * [辅助工具](#辅助工具)
+        *【密码生成】
+        *【密码查询】
+        *【提权辅助】
+        *【杀软查询】
+    * [其他功能](#其他功能)
+	    *【导出功能】
+		*【数据库管理】
+		*【配置管理】
+		*【主题设置】
+* [软件下载](#软件下载)
+* [致谢](#致谢)
+* [FAQ](#FAQ)
+* 
 ### 更新日志
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
 **所有提过bug或建议的小伙伴可加入工具交流群，并享受新版本新功能第一时间尝鲜及永久VIP服务！**
+
+v1.6版 【2024.03.25】 
+
+	1、增加项目管理流程，增强各功能模块联动
+	2、使用数据库可对所有功能和数据进行增删改查
+	3、添加js爬取功能及js敏感信息匹配 @onewinner  @无先森
+	4、敏感目录字典更新 @无先森
+	5、配置代理增加前端校验 @WangGang
+	6、目录枚举Ext及3xx跳转优化 @无先森 @Zxc123456zxc
+	7、网络空探导出所有tab到一个excel @Evi10x01
+	8、优化代理设置模块，完善校验和提示 @一口蛋黄苏
+	9、密码破解修改端口每次只能输一位 @nuanfeng1yue @💪  @零乱  @清风拂杨柳
+	10、端口扫描增加只探测存活选项 @Wans @Black
+	11、poc检测增加Log模块 
+	12、URL探测联动功能bug  @Evi10x01	
+	13、IP端口扫描时闪退问题 @xxsmile123 @Thron_bird
+	14、空间测绘添加body、证书、ICON检索  @Tian
+	15、空间测绘右键添加继续查询标题、ip、域名等  @Tian
+	16、生成字典枚举模式闪退 @咕噜咕噜
+
+v1.5版 【2024.03.01】 
+
+	1、目录枚举超链接bug @无先森 @Google_Hacking
+	2、扫描目标过多时，点击终止后会继续扫描 @行者无疆
+	3、增加一键检测ApiKey可用性功能 @Dawn❤
+	4、枚举模式生成字典会异常退出  @无先森
+	5、大量数据时前端会有卡顿 @零乱 @Mr.Right @impdx
+	6、指纹识别中hostname乱码问题 @hunmeng123 @2gggggg
+	7、AV识别数据库更新 @pei
+	8、网络空间测绘增加url跳转及优化  @づ听风看月 @80576560
+	9、Mac深色Url超链接样式优化 @下完雪🍁
+	10、FofaApi接口权限bug @Bains @💪
+	11、多次查询时Tab数据可能覆盖 @J1wa
+	12、导出excel时报错 @Huck-Lim 
+	13、空间测绘VT平台数据回传问题 @Evi10x01
+	14、密码破解log无法清除 @sq565163
+	15、个别网站标题乱码问题 @Dawn❤️
+	16、支持自定义添加红队命令 @Lelylsj 
+	17、支持自定义设备密码  @Sharlong-Wen
+	18、优化端口、URL的检索功能 @xxxxl🐾
+	19、配置文件版本号同步 @づ听风看月
+	20、配置cookie未生效 @bupsdx
 
 v1.4版 【2024.02.18】 
 
@@ -153,10 +229,43 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 
 软件运行后，需审慎阅读、充分理解 **《免责声明&使用许可》** 内容，并在Welcome页面勾选 **“我同意所有条款”** ，之后方可使用本软件。
 
+<div align=center><img src=images/image-20240327171101515.png width=80% ></div>
 
-<div align=center><img src=images/image-20231221131344810.png width=80% ></div>
+####  3、项目管理
 
-#### 3、端口扫描
+项目管理功能是把各功能进行流程整合，用户可根据自己的使用场景设计项目功能，完美融合了"资产测绘"、"子域名枚举"、"IP端口扫描"、"密码破解"、"POC检测"、"URL扫描"、"目录探测"、"UrlFinder"等功能。项目执行结果会存储到相应项目数据库中，方便后续查询和使用。
+
+**【任务配置】**
+
+在添加目标资产并配置任务参数后，TscanPlus会在后台对相应目标执行相应操作，并显示在对应功能Tab栏中。
+
+1、各任务为顺序执行，"资产测绘" => "子域名枚举" => "IP端口扫描" => "密码破解" => "POC检测" => "URL扫描" => "目录探测" => "UrlFinder"，默认情况下，上一步探测发现的资产会作为后一阶段的资产输入。
+
+2、在使用资产测绘功能时，如果测绘发现的资产可能不属于你的目标范围时，开启“对资产测绘结果进行扫描和POC检测”时，空间测绘的资产可能超授权范围，请慎用。
+
+3、开启URL探测功能后，会对域名+IP+URL+空间测绘等发现的所有web应用进行URL指纹探测。
+
+4、不选择“POC匹配指纹”时，会对所有探测到的资产+所有POC进行测试。
+
+5、开启“所有端口和服务”后，会对匹配到的所有端口和服务进行破解，不开启时只破解常见的8种服务。
+
+6、在使用目录探测功能时，如选择"仅URL列表"时，仅会对URL列表中的URL进行目录探测。选择"所有结果URL"时，会对IP探测、域名任务等发现的所有URL进行目录探测，当URL较多时可能会较慢。
+
+<div align=center><img src=images/image-20240327161224753.png  width=80% ></div>
+
+**【项目管理】**
+
+在项目管理中，还可直观的展示项目概览，如项目总数、URL资产、IP资产、漏洞总数、敏感信息等，并可对所有项目进行编辑、重新执行、停止、删除等操作。
+
+<div align=center><img src=images/image-20240327160041727.png  width=80% ></div>
+
+**【结果展示】**
+
+所有扫描结果将显示在对应功能Tab中。
+
+<div align=center><img src=images/image-20240327160956342.png  width=80% ></div>
+
+#### 4、端口扫描
 
 对目标IP进行存活探测、端口开放探测、端口服务识别、Banner识别等，可识别100余种服务和协议。
 
@@ -204,7 +313,7 @@ Socks5代理格式：socks5://10.10.10.10:8081  或 socks5://user:pass@10.10.10.
 
 <div align=center><img src=images/image-20231221133246236.png width=80% ></div>
 
-#### 4、URL探测
+#### 5、URL探测
 
 TscanPlus目前整合指纹2.6W余条，经多次优化，有效提高了资产发现的协程并发效率，对1万个web系统进行指纹识别仅需8-10分钟，在效率和指纹覆盖面方面应该是目前较高的了。
 
@@ -225,7 +334,7 @@ https://www.abc.com:8443
 
 <div align=center><img src=images/image-20231221133907830.png width=80% ></div>
 
-#### 5、域名枚举
+#### 6、域名枚举
 
 在域名枚举方面TscanPlus集成了多种功能，可以使用字典枚举，也可以使用多个免费接口进行查询。
 
@@ -248,7 +357,7 @@ tidesec.com.cn
 
 <div align=center><img src=images/image-20240110164454188.png width=80% ></div>
 
-#### 6、POC检测
+#### 7、POC检测
 
 TscanPlus内置了部分POC，并进行了Level分类，Level1是最常见、使用频率最高的POC，Level2是较通用的POC，Level3为不太常见POC。
 
@@ -270,7 +379,7 @@ POC选项可指定外部POC文件或POC文件夹，在后面输入POC的绝对�
 
 <div align=center><img src=images/image-20231221135024558.png width=80% ></div>
 
-#### 7、密码破解
+#### 8、密码破解
 
 TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网弱口令进行排查，为提高检测效率，优选并精简每个服务的用户名和密码字典。覆盖的服务包括：SSH,RDP,SMB,MYSQL,SQLServer,Oracle,MongoDB,Redis,PostgreSQL,MemCached,Elasticsearch,FTP,Telnet,WinRM,VNC,SVN,Tomcat,WebLogic,Jboss,Zookeeper,Socks5,SNMP,WMI,LDAP,LDAPS,SMTP,POP3,IMAP,SMTP_SSL,IMAP_SSL,POP3_SSL,RouterOS,WebBasicAuth,Webdav,CobaltStrike等。
 
@@ -286,7 +395,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20231221140432486.png width=80% ></div>
 
-#### 8、空间测绘
+#### 9、空间测绘
 
 为使信息搜集更快捷方便，TscanPlus集成了多个网络空间测绘接口，包括鹰图**Hunter、Fofa、shodan、360 Quake、Zoomeye 钟馗之眼、Censys、微步在线ThreatBook、BinaryEdge、VirusTotal**等9个主流空探API，可根据域名、IP地址、端口、应用、服务等进行检索，并对各网络空探结果进行去重整合。
 
@@ -294,9 +403,13 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 首先要配置key信息，如没有key可点击后面"API申请"进行申请，之后点击启用即可使用该API接口。
 
-在主界面选择字段，如域名、IP地址、端口、应用、服务等进行检索，并输入检索条件即可。TscanPlus会对所有结果进行去重和整合。
+在主界面选择字段，如域名、IP地址、端口、应用、服务、body、证书、ICON等进行检索，并输入检索条件即可。TscanPlus会对所有结果进行去重和整合。
 
-<div align=center><img src=images/image-20240219132218857.png width=80% ></div>
+针对Fofa API增加自定义API地址功能，在设置Fofa ApiKey时，如需要使用自定义API地址功能，格式只要按照`邮箱:key||url`，在url和key之间为双竖线即可，示例如下：`9*****@qq.com:3f21a408*********6e3fa8078||http://fofaapi.com`,添加完成后可进行key可用性验证，测试是否能获取数据。
+
+<div align=center><img src=images/image-20240327165140791.png  width=80% ></div>
+
+
 
 **【查询结果】**
 
@@ -304,11 +417,11 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 选择某一行或多行，右键菜单也可对某地址进行单独POC测试、目录枚举、端口扫描等，也可以对数据进行单条保存或全部保存。
 
-<div align=center><img src=images/image-20240219132548364.png width=80% ></div>
+<div align=center><img src=images/image-20240327164931978.png width=80% ></div>
 
-#### 9、目录扫描
+#### 10、目录枚举
 
-目录扫描主要是对web站点进行目录枚举，支持字典模式、Fuzz模式、存活探测等，支持HEAD/GET方法，默认使用HEAD方法。
+目录枚举主要是对web站点进行目录枚举，支持字典模式、Fuzz模式、存活探测等，支持HEAD/GET方法，默认使用HEAD方法。
 
 **【任务配置】**
 
@@ -326,7 +439,31 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20240219111318207.png width=80% ></div>
 
-#### 10、上线反弹
+#### 11、UrlFinder
+
+URLFinder功能可对目标信息进行快速、全面的提取，可用于分析页面中的js与url，查找隐藏在其中的敏感信息或未授权api接口。
+
+**【任务配置】**
+
+输入目标地址后，可进行模式选择，"普通模式"默认对单层链接进行抓取，"深入模式"会对链接进行三层抓取，耗时相对长一些。
+
+探测层数可设置探测的链接层数，上限数量是对URL总数进行限制，防止无限制爬取。
+
+"仅显示本站"是对URL和JS结果进行过滤，此外还可以配置线程数，并可以对扩展名、状态码、关键词进行过滤。
+
+**【扫描结果】**
+
+扫描结果如下，会显示发现的URL地址、状态码、Body长度等，当发现敏感信息时，会在"标题||敏感信息"列中显示。
+
+最下方会显示目标存活数量、枚举成功数量、检测队列情况、用时等。
+
+1、对返回同样长度、同样状态码的页面，出现5次以上不再显示
+
+2、增加关键字过滤、返回长度过滤、自定义后缀等功能。
+
+<div align=center><img src=images/image-20240327163203001.png  width=80% ></div>
+
+#### 12、上线反弹
 
 TscanPlus内置各类反弹shell命令85条、MSF生成命令21条、CS免杀上线命令等，可根据shell类型、操作系统类型、监听类型自动生成代码。
 
@@ -342,7 +479,7 @@ CS上线配置CS Payload地址后，即可生成相应代码。
 
 <div align=center><img src=images/image-20231221141838825.png width=80% ></div>
 
-#### 11、红队命令
+#### 13、红队命令
 
 TscanPlus内置常用红队命令，包括Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网命令18类、下载命令31条。
 
@@ -386,7 +523,7 @@ curl http://www.google.com/key.txt -o key.txt
 
 <div align=center><img src=images/image-20240111143548211.png width=80% ></div>
 
-#### 12、辅助工具
+#### 14、辅助工具
 
 TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密、字典生成等模块还在完善，后续会持续更新。
 
@@ -414,6 +551,8 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 
 <div align=center><img src=images/image-20231221142616501.png width=80% ></div>
 
+#### 15、其他功能
+
 #####  **【导出功能】**
 
 1、在所有功能模块中，新增了导出excel功能，默认会保存在程序根目录下。
@@ -427,6 +566,32 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 <div align=center><img src=images/image-20240111144248390.png width=80% ></div>
 
 <div align=center><img src=images/image-20240111144635519.png width=80% ></div>
+
+##### **【数据库管理】**
+
+可对所有数据进行持久存储和使用。默认DB文件会在config文件下生成。
+
+<div align=center><img src=images/image-20240327165547238.png  width=80% ></div>
+
+##### 【配置管理】
+
+对各功能配置参数写入配置文件，参数修改后只要执行一次相应功能就会写入配置文件，下次无需再次修改。
+
+<div align=center><img src=images/image-20240327165714901.png  width=80% ></div>
+
+红队命令、上线命令、默认密码等可自定义添加，并保存在配置文件。
+
+<div align=center><img src=images/image-20240327165814782.png  width=80% ></div>
+
+##### 【主题设置】
+
+增加系统主题设定，在任意页面打开"高级配置"，可对系统主题进行配置，选择深色或浅色模式。（该功能基于wails框架，mac兼容较好，在windows部分系统上应用可能存在问题）
+
+<div align=center><img src=images/image-20240327165922789.png  width=80% ></div>
+
+Mac系统下的的深色和浅色主题对比。
+
+<div align=center><img src=images/image-20240327172657687.png  width=80% ></div>
 
 ### 软件下载
 
