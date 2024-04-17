@@ -99,6 +99,28 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 <div align=center><img src=images/wxxzs.png width=30% ></div>
 
+v1.7版 【2024.04.16】 
+
+	1、Poc检测可直接调用Nuclei、Xray、Afrog @J1wa @无先森   
+	2、增加自定义poc功能 
+	3、在高级选项中增加自定义主题模式
+	4、IP扫描时会先探测是否存在防火墙 
+	5、增加资产分拣功能 @xxsmile123
+	6、优化更新账号和密码字典 @那个少年
+	7、优化自定义账号密码功能 @DeEpinGh0st
+	8、自定义配置目录、导出目录等 @づ听风看月 @蜉蝣
+	9、修复项目管理若干Bug  @无先森 @Evi10x01
+	10、敏感目录字典更新 @无先森
+	11、Fofa自定义api地址 @Tian @季風吹向大海คิดถึง 
+	12、项管理添加进度状态展示
+	13、UrlFinder功能优化完善及bug修复 @A1
+	14、强化Url敏感信息检索功能 @xxsmile123
+	15、密码破解功能优化完善 @步行街 @endin9 @Y.
+	16、Banner标红资产自动排序 @Evi10x01
+	17、部分指纹精确度优化 @Black @倏尔 @高歌
+	18、目录扫描自定义字典bug @Evi10x01
+	19、项目任务中的目录枚举功能优化 @鼎级FW
+	20、项目任务自定义字典功能优化 
 
 v1.6版 【2024.03.25】 
 
@@ -376,6 +398,12 @@ POC选项可指定外部POC文件或POC文件夹，在后面输入POC的绝对�
 
 外部POC可支持Xray或Xray或同样格式的POC，POC编写可参考：https://poc.xray.cool/ 或 https://phith0n.github.io/xray-poc-generation/
 
+**【自定义poc】**
+
+Poc检测可直接调用Nuclei、Xray、Afrog等外部POC工具，并可对各工具的poc进行自定义。
+
+<div align=center><img src=images/image-20240417162352536.png width=80% ></div>
+
 **【扫描结果】**
 
 扫描结果如下，会显示发现漏洞的站点、POC名称、Banner、状态码、标题等，选择某一行后，可查看Request和Response数据包。
@@ -391,6 +419,10 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 **【任务配置】**
 
 在左侧选定要破解的服务，并填入目标地址即可。右侧配置任务时，可选择使用内置字典或自行导入、是否开启指纹识别、Oracle监听设置、执行命令等。
+
+<div align=center><img src=images/image-20240417162518632.png width=80% ></div>
+
+
 
 **【扫描结果】**
 
@@ -555,6 +587,14 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 根据windows的tasklist信息，匹配杀软进程，内置1042条杀软识别规则。返回进程名称、进程ID、杀软名称等信息。
 
 <div align=center><img src=images/image-20231221142616501.png width=80% ></div>
+
+**【资产分拣】**
+
+可一键提取资产中的主域名、子域名、IP、URL、Tscan/Fscan结果。
+
+<div align=center><img src=images/image-20240417162102818.png width=80% ></div>
+
+
 
 #### 15、其他功能
 
