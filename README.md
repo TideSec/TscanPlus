@@ -2,12 +2,12 @@
 <div align=center><img src=images/TscanPlus.png width=50% ></div>
 
 
-## TscanPlus
+## 无影(TscanPlus)
 一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。
 
-**【主要功能】** 端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、域名探测、网络空探等。
+**【主要功能】** 端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、域名探测、网络空探、项目管理等。
 
-**【辅助功能】** 编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成、JAVA编码等。
+**【辅助功能】** 编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成、JAVA编码、资产分拣等。
 
 https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f33d032a23e
 
@@ -16,7 +16,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 </video>
 
 
-在2019年就用Python写过指纹识别工具——[TideFinger](https://github.com/TideSec/TideFinger)，并实现了一个免费在线的指纹检测平台——潮汐指纹[http://finger.tidesec.com](http://finger.tidesec.com)，目前已积累用户3万余人，每日指纹识别约2000余次，2023年初又基于Go语言开发了Go版的[TideFinger_Go](https://github.com/TideSec/TideFinger_Go)，在web指纹和服务指纹的识别方面积累了一些经验。后来我们团队内部大佬基于Fscan开发了一个Tscan，主要是用于内部的POC收集整理并形成自动化武器库，可基于指纹识别结果对poc进行精准检测。TscanPlus就是以指纹和Poc为根基，扩展了多项自动化功能，可大大提高安全运维和安全检测的效率，方便网络安全从业者使用。
+在2019年就用Python写过指纹识别工具——[TideFinger](https://github.com/TideSec/TideFinger)，并实现了一个免费在线的指纹检测平台——潮汐指纹[http://finger.tidesec.com](http://finger.tidesec.com)，目前已积累用户3万余人，每日指纹识别约2000余次，2023年初又基于Go语言开发了Go版的[TideFinger_Go](https://github.com/TideSec/TideFinger_Go)，在web指纹和服务指纹的识别方面积累了一些经验。后来我们团队内部大佬基于Fscan开发了一个Tscan，主要是用于内部的POC收集整理并形成自动化武器库，可基于指纹识别结果对poc进行精准检测。无影(TscanPlus)就是以指纹和Poc为根基，扩展了多项自动化功能，可大大提高安全运维和安全检测的效率，方便网络安全从业者使用。
 
 **【特色功能】**
 
