@@ -99,6 +99,30 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 <div align=center><img src=images/wxxzs.png width=30% ></div>
 
+
+v1.8版 【2024.05.01】 
+
+	1、密码破解功能完善及多线程优化
+	2、资产较多时的前端响应优化
+	3、多个敏感目录字典更新 @无先森
+	4、内置多个目录字典并自动释放到目录 @无先森
+	5、资产分拣功能优化及bug修复  @xxsmile123
+	6、增加RTSP端口破解功能 @づ听风看月 @Reluctantly  
+	7、反弹shell和cs上线IP保存 @Evi10x01
+	8、项目漏洞详情展示 @WasteMaterial @Evi10x01
+	9、Hunter查询接口优化 @鼎级FW
+	10、Quake查询接口优化 @lwjdsgz
+	11、空间测绘增加icp备案查询 @Evi10x01
+	12、密码破解联动功能Bug修复 @Evi10x01 @鼎级FW
+	13、端口扫描可根据服务进行爆破  @jisanlong
+	14、自定义Poc显示bug @Phonk
+	15、url探测存在卡顿情况 @rkabyss
+	16、结果日志输出bug @季風吹向大海คิดถึง 
+	17、任务联动时地址栏显示Bug 
+	18、密码破解闪退bug修复 @鼎级FW
+	19、密码破解支持协议://IP:Port格式
+	20、爆破功能自定义字典bug @wvykey
+
 v1.7版 【2024.04.16】 
 
 	1、Poc检测可直接调用Nuclei、Xray、Afrog @J1wa @无先森   
@@ -284,7 +308,7 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 
 在项目管理中，还可直观的展示项目概览，如项目总数、URL资产、IP资产、漏洞总数、敏感信息等，并可对所有项目进行编辑、重新执行、停止、删除等操作。
 
-<div align=center><img src=images/image-20240327160041727.png  width=80% ></div>
+<div align=center><img src=images/image-20240507155323222.png  width=80% ></div>
 
 **【结果展示】**
 
@@ -402,7 +426,18 @@ POC选项可指定外部POC文件或POC文件夹，在后面输入POC的绝对�
 
 Poc检测可直接调用Nuclei、Xray、Afrog等外部POC工具，并可对各工具的poc进行自定义。
 
+在开启“Poc匹配指纹”功能后，程序会根据目标指纹对外置poc进行模糊匹配，之后再进行poc检测，可大大减少poc检测发包量，缩减检测时间。
+
 <div align=center><img src=images/image-20240417162352536.png width=80% ></div>
+
+Nuclei的poc会默认下载到用户文件夹下的nuclei-templates目录，本程序会自动识别该目录，所以想在Nuclei中使用“Poc匹配指纹”功能时可不指定Nuclei的Poc。
+
+但Afrog的Poc默认是内置在程序中，所以如果想在Afrog中使用“Poc匹配指纹”功能，需从https://github.com/zan8in/afrog/tree/main/pocs/afrog-pocs中下载poc文件，然后在程序中指定Poc所在目录，即可在Afrog中使用“Poc匹配指纹”功能。
+
+<div align=center><img src=images/image-20240507162300100.png width=80% ></div>
+
+无影(TscanPlus)的自定义POC功能也已经完善，可兼容Xray Poc 1.0版和Fscan的Poc格式。
+自行编写Poc时，可使用工具进行测试编写：https://github.com/phith0n/xray-poc-generation 
 
 **【扫描结果】**
 
