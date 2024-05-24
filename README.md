@@ -266,7 +266,7 @@ v0.0版 【2023.10.10】 TscanPlus架构选择及功能初步规划
 
 #### 1、软件下载及更新
 
-Github下载：https://github.com/TideSec/Tscanplus   
+Github下载：https://github.com/TideSec/TscanPlus/releases 
 
 知识星球：【剑影安全实验室】见下方二维码（**更多、更新版本**）
 
