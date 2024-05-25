@@ -93,12 +93,6 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
-**所有提过bug或建议的小伙伴可加入工具交流群，并享受新版本新功能第一时间尝鲜及永久VIP服务！**
-
-群已满200人，加下方微信号，备注"工具交流群"会拉群，非实时在线回复可能不太及时，见谅。
-
-<div align=center><img src=images/wxxzs.png width=30% ></div>
-
 
 v1.8版 【2024.05.01】 
 
