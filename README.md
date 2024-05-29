@@ -696,7 +696,7 @@ Mac系统下的的深色和浅色主题对比。
 
 ### 软件下载
 
-Github下载：https://github.com/TideSec/Tscanplus   知识星球：下方二维码（更多、更新版本）
+Github下载：https://github.com/TideSec/TscanPlus/releases    知识星球：下方二维码（更多、更新版本）
 
 部分功能还在完善（子域名模块、POC自定义功能等），目前暂不提供源码，这里打包了windows/mac/linux三个版本的TscanPlus供下载。
 
@@ -750,7 +750,9 @@ Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://de
 
 程序使用Go开发，Windows版本使用upx进行了加壳，杀软可能会报毒，请自行排查。
 
+**4、程序打开后看不到上方标签栏**
 
+在个别电脑上打开后，只能看到TscanPlus的中间部分，看不到上方标签栏，这可能是由于电脑分辨率较低或设置了缩放率而导致。这时需要将分辨率修改为1440*1080以上，同时将缩放率修改为100%即可。
 
-**4、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
+**5、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
 
