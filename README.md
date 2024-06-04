@@ -746,13 +746,25 @@ https://sysin.org/blog/macos-if-crashes-when-opening/    【macOS 提示：“�
 
 Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)，而默认情况下Windows11和win2012会安装，但有些旧机器(如Win2k8)不会，如机器没有webview2环境，程序会引导下载安装webview2。也可自行手动下载：https://developer.microsoft.com/en-us/microsoft-edge/webview2。
 
-**3、Windows杀软报病毒问题**
+**3、Linux版运行报错**
+
+Linux版（AMD64和Arm64版本）是基于Kali 2023.01系统进行编译，经测试可兼容Kali2023之后版本以及Ubuntu22.04。
+
+对Ubuntu22.04之前的系统，可能出现的报错：
+
+（1）报错信息：`libc.so.6: version 'GLIBC_2.34' not found`，此时需额外安装libc6库，可参考https://blog.csdn.net/huazhang_001/article/details/128828999
+
+（2）报错信息：`libwebkit2gtk-4.0.so.37: camnot open shared object file`，此时需要安装`libwebkit2gtk`库，ubuntu下可尝试执行`apt-get install libwebkit2gtk-4.0-dev`
+
+不过Linux的库依赖问题就是个玄学，不建议过度折腾，建议Kali2023之后版本以及Ubuntu22.04。
+
+**4、Windows杀软报病毒问题**
 
 程序使用Go开发，Windows版本使用upx进行了加壳，杀软可能会报毒，请自行排查。
 
-**4、程序打开后看不到上方标签栏**
+**5、程序打开后看不到上方标签栏**
 
 在个别电脑上打开后，只能看到TscanPlus的中间部分，看不到上方标签栏，这可能是由于电脑分辨率较低或设置了缩放率而导致。这时需要将分辨率修改为1440*1080以上，同时将缩放率修改为100%即可。
 
-**5、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
+**6、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
 
