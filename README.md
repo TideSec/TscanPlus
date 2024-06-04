@@ -754,7 +754,7 @@ Linux版（AMD64和Arm64版本）是基于Kali 2023.01系统进行编译，经�
 
 （1）报错信息：`libc.so.6: version 'GLIBC_2.34' not found`，此时需额外安装libc6库，可参考https://blog.csdn.net/huazhang_001/article/details/128828999
 
-（2）报错信息：`libwebkit2gtk-4.0.so.37: camnot open shared object file`，此时需要安装`libwebkit2gtk`库，ubuntu下可尝试执行`apt-get install libwebkit2gtk-4.0-dev`
+（2）报错信息：`libwebkit2gtk-4.0.so.37: cannot open shared object file`，此时需要安装`libwebkit2gtk`库，ubuntu下可尝试执行`apt-get install libwebkit2gtk-4.0-dev`
 
 不过Linux的库依赖问题就是个玄学，不建议过度折腾，建议Kali2023之后版本以及Ubuntu22.04。
 
