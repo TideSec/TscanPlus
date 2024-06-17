@@ -1,4 +1,5 @@
 
+
 <div align=center><img src=images/TscanPlus.png width=50% ></div>
 
 
@@ -20,15 +21,15 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 **【特色功能】**
 
-1、内置2.6W余条指纹数据，对1万个web系统进行指纹识别仅需8-10分钟，在效率和指纹覆盖面方面应该是目前较高的了。
+1、内置5.2W余条指纹数据，对1万个web系统进行指纹识别仅需8-10分钟，在效率和指纹覆盖面方面应该是目前较高的了。
 
-2、在指纹探测结果中，对130多个红队常见CMS和框架、Poc可关联CMS进行了自动标注。
+2、在指纹探测结果中，对130多个红队常见CMS和框架、Poc可关联CMS进行了自动标注。内置大量高质量Poc，并可外接Nuclei、Afrog、Xray等Poc工具，可实现指纹和Poc的联动，根据指纹识别的结果自动关联Poc，并可直接查看poc数据包相关信息。
 
-3、可实现指纹和Poc的联动，根据指纹识别的结果自动关联Poc，并可直接查看poc数据包相关信息。
+3、在创建IP端口扫描、Url扫描时，可关联Poc检测、密码破解、目录扫描等功能，发现匹配的服务或产品时会自动触发密码破解或poc检测。
 
-4、在创建IP端口扫描、Url扫描时，可关联Poc检测、密码破解、目录扫描等功能，发现匹配的服务或产品时会自动触发密码破解或poc检测。
+4、内置34种常见服务的弱口令破解，可方便管理员对内网弱口令进行排查，为提高检测效率，优选并精简每个服务的用户名和密码字典。覆盖的服务包括：SSH,RDP,SMB,MYSQL,SQLServer,Oracle,MongoDB,Redis,PostgreSQL,MemCached,Elasticsearch,FTP,Telnet,WinRM,VNC,SVN,Tomcat,WebLogic,Jboss,Zookeeper,Socks5,SNMP,WMI,LDAP,LDAPS,SMTP,POP3,IMAP,SMTP_SSL,IMAP_SSL,POP3_SSL,RouterOS,WebBasicAuth,Webdav,CobaltStrike等。
 
-5、内置34种常见服务的弱口令破解，可方便管理员对内网弱口令进行排查，为提高检测效率，优选并精简每个服务的用户名和密码字典。覆盖的服务包括：SSH,RDP,SMB,MYSQL,SQLServer,Oracle,MongoDB,Redis,PostgreSQL,MemCached,Elasticsearch,FTP,Telnet,WinRM,VNC,SVN,Tomcat,WebLogic,Jboss,Zookeeper,Socks5,SNMP,WMI,LDAP,LDAPS,SMTP,POP3,IMAP,SMTP_SSL,IMAP_SSL,POP3_SSL,RouterOS,WebBasicAuth,Webdav,CobaltStrike等。
+5、实现了编码解码、哈希计算、加密解密、国密算法、数据格式化、其他转换等共36种类型，其中编码解码类8种、哈希计算13种、加密解密9种、国密算法3种、数据格式化9种、其他2种。包含了AES、RSA、SM2、SM4、DES、3DES、Xor、RC4、Rabbit、Base64、Base32、URL、ASCII、各进制转换、字符串与进制转换、HTML、Unicode、MD5、Hmac、SM3、SHA1、SHA2、SHA3、NTLM、JSON格式化与压缩、XML格式化与压缩、IP地址与整数互转、String.fromCharCode、Unix时间戳互转、文本去除重复行、字母大小写、生成各类随机字符串、字符串反转、JWT解析与弱密码、一键解密OA等。
 
 6、目录枚举默认使用HEAD方式，可对并发、超时、过滤、字典等进行自定义，内置了DirSearch的字典，可导入自己的字典文件，也可用内置字典fuzz工具进行生成。
 
@@ -36,11 +37,9 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 8、灵活的代理设置，可一键设置全局代理，也可以各模块单独开启代理功能，支持HTTP(S)/SOCKS5两种代理，支持身份认证。
 
-9、快速的子域名探测，域名可联动其他子功能，可配置key后对接多个网络空间探测平台，一键查询去重(待完成)。
+9、快速的子域名探测，域名可联动其他子功能，可配置key后对接多个网络空间探测平台，一键查询去重。
 
-10、内置Windows提权辅助、杀软查询、shiro解密(待完成)、编码解码等各类工具。
-
-
+10、内置资产分拣、Windows提权辅助、杀软查询、shiro解密、编码解码等各类工具。
 
 **【免责声明&使用许可】**
 
@@ -68,19 +67,20 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
     * [空间测绘](#9空间测绘)
     * [目录枚举](#10目录枚举)
     * [UrlFinder](#11UrlFinder)
-    * [上线反弹](#12上线反弹)
+    * [编码解码](#12编码解码)
+    * [上线反弹](#13上线反弹)
         * 【反弹shell】
         * 【CS上线】
-    * [红队命令](#13红队命令)
+    * [红队命令](#14红队命令)
         * 【红队命令】
         * 【下载命令】
         * 【java编码】
-    * [辅助工具](#14辅助工具)
+    * [辅助工具](#15辅助工具)
         * 【密码生成】
         * 【密码查询】
         * 【提权辅助】
         * 【杀软查询】
-    * [其他功能](#15其他功能)
+    * [其他功能](#16其他功能)
         * 【导出功能】
         * 【数据库管理】
         * 【配置管理】
@@ -92,6 +92,29 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 ### 更新日志
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
+
+v2.0版 【2024.06.18】 
+
+	1、增加编解码功能，支持36种编解码、加解密、哈希等
+	2、针对445端口增加MS17010检测 
+	3、Nuclei自定义poc智能匹配Bug @陈皮老四
+	4、敏感目录字典更新 @无先森 
+	5、主动指纹探测的误报问题 @望天 @🇯
+	6、Url探测检索及清除记录bug @零乱
+	7、资产分拣的收缩模式和C段分拣 @鼎级FW @猫哥
+	8、Poc检测增加漏洞等级标识 @放飞梦想จุ๊บ
+	9、Poc检测流程优化 @zlj
+	10、空间测绘标签页批量关闭 @季風吹向大海คิดถึง 
+	11、设置hunter最多查询页数5 @Evi10x01
+	12、破解字典空口令bug @Darkid_98
+	13、修复ip扫描端口策略 @-A1ert
+	14、Poc检索前端bug @魚丸
+	15、空间测绘查询Tab混乱bug @澍小夏 @大反派
+	16、端口指纹选项关闭时资产不显示 @张召
+	17、联动密码破解时覆盖所有服务及提示Bug  @鼎级FW
+	18、pop3协议密码爆破bug  @Azure
+	19、端口扫描时Socks5代理问题 @张召
+	20、调用nuclei和xray可使用代理扫描  @魚丸
 
 v1.9版 【2024.05.28】 
 
@@ -323,19 +346,19 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 
 6、在使用目录探测功能时，如选择"仅URL列表"时，仅会对URL列表中的URL进行目录探测。选择"所有结果URL"时，会对IP探测、域名任务等发现的所有URL进行目录探测，当URL较多时可能会较慢。
 
-<div align=center><img src=images/image-20240327161224753.png  width=80% ></div>
+<div align=center><img src=images/image-20240327161224753.png width=80% ></div>
 
 **【项目管理】**
 
 在项目管理中，还可直观的展示项目概览，如项目总数、URL资产、IP资产、漏洞总数、敏感信息等，并可对所有项目进行编辑、重新执行、停止、删除等操作。
 
-<div align=center><img src=images/image-20240507155323222.png  width=80% ></div>
+<div align=center><img src=images/image-20240617182736349.png width=80% ></div>
 
 **【结果展示】**
 
 所有扫描结果将显示在对应功能Tab中。
 
-<div align=center><img src=images/image-20240327160956342.png  width=80% ></div>
+<div align=center><img src=images/image-20240327160956342.png width=80% ></div>
 
 #### 4、端口扫描
 
@@ -356,6 +379,10 @@ IP支持换行分割，支持如下格式：192.168.1.1、192.168.1.1/24、192.1
 选择某一行，右键菜单也可对某地址进行单独POC测试、弱口令测试、目录枚举等，也可以对数据进行单条保存或全部保存。
 
 <div align=center><img src=images/image-20231221132923278.png width=80% ></div>
+
+为方便某些场景下的使用，针对内网开放445端口的服务器会自动进行MS17010原理性探测，在避免对服务器造成影响的同时尽可能的探测可能存在的漏洞。
+
+<div align=center><img src=images/image-20240617181901258.png width=80% ></div>
 
 **【功能联动】**
 
@@ -453,9 +480,13 @@ Poc检测可直接调用Nuclei、Xray、Afrog等外部POC工具，并可对各�
 
 Nuclei的poc会默认下载到用户文件夹下的nuclei-templates目录，本程序会自动识别该目录，所以想在Nuclei中使用“Poc匹配指纹”功能时可不指定Nuclei的Poc。
 
-但Afrog的Poc默认是内置在程序中，所以如果想在Afrog中使用“Poc匹配指纹”功能，需从https://github.com/zan8in/afrog/tree/main/pocs/afrog-pocs中下载poc文件，然后在程序中指定Poc所在目录，即可在Afrog中使用“Poc匹配指纹”功能。
+但Afrog的Poc默认是内置在程序中，所以如果想在Afrog中使用“Poc匹配指纹”功能，需从https://github.com/zan8in/afrog/tree/main/pocs/afrog-pocs 中下载poc文件，然后在程序中指定Poc所在目录，即可在Afrog中使用“Poc匹配指纹”功能。
 
-<div align=center><img src=images/image-20240507162300100.png width=80% ></div>
+对指纹匹配Poc的规则进行了优化和完善，在防止漏报的情况下，尽可能的减小poc检测数量。添加poc检测级别过滤器，可有效避免nuclei、afrog工具默认扫描时的大量info类信息。
+
+<div align=center><img src=images/image-20240617182603002.png width=80% ></div>
+
+
 
 无影(TscanPlus)的自定义POC功能也已经完善，可兼容Xray Poc 1.0版和Fscan的Poc格式。
 自行编写Poc时，可使用工具进行测试编写：https://github.com/phith0n/xray-poc-generation 
@@ -500,7 +531,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 针对Fofa API增加自定义API地址功能，在设置Fofa ApiKey时，如需要使用自定义API地址功能，格式只要按照`邮箱:key||url`，在url和key之间为双竖线即可，示例如下：`9*****@qq.com:3f21a408*********6e3fa8078||http://fofaapi.com`,添加完成后可进行key可用性验证，测试是否能获取数据。
 
-<div align=center><img src=images/image-20240327165140791.png  width=80% ></div>
+<div align=center><img src=images/image-20240327165140791.png width=80% ></div>
 
 
 
@@ -554,9 +585,65 @@ URLFinder功能可对目标信息进行快速、全面的提取，可用于分�
 
 2、增加关键字过滤、返回长度过滤、自定义后缀等功能。
 
-<div align=center><img src=images/image-20240327163203001.png  width=80% ></div>
+<div align=center><img src=images/image-20240327163203001.png width=80% ></div>
 
-#### 12、上线反弹
+#### 12、编解解码
+
+编解码功能模块实现了编码解码、哈希计算、加密解密、国密算法、数据格式化、其他转换等共36种类型，其中编码解码类8种、哈希计算13种、加密解密9种、国密算法3种、数据格式化9种、其他2种。
+
+**【任务配置】**
+
+1、只需在"编码解码"功能页面的左侧栏目中点选对应的编码项，即可添加到右侧Tab中。
+
+2、每个Tab支持多个编码叠加，并支持编码的排序，上一个编码的输出会作为下一个编码的输入。
+
+3、每种编码都可以选择是否启用、加密或解密，对每个编码可进行输入和输出格式进行设置，支持RAW、Hex、base64等常见格式。
+
+4、无影支持多Tab切换，可以根据需求设置多组Tab，以对结果进行对比。
+
+5、可记住本次编码配置，下次再运行软件，可直接使用上一次的配置。
+
+<div align=center><img src=images/image-20240617175854995.png width=80% ></div>
+
+**【输出结果】**
+
+**1、编码解码**：Base64、Base32、URL编解码、ASCII、各进制转换、字符串与进制转换、HTML编解码、Unicode编解码、一键编解码等
+
+<div align=center><img src=images/image-20240617180132022.png width=80% ></div>
+
+一键编解码可实现对输入的字符，进行所有的编码解码并输出结果。
+
+<div align=center><img src=images/image-20240617180214330.png width=80% ></div>
+
+**2、哈希计算**：MD5、HmacMD5、SM3、HmacSM3、SHA1、HmacSHA1、SHA2-224、SHA2-256、SHA2-384、SHA2-512、HmacSHA2、SHA3-224、SHA3-256、SHA3-384、SHA3-512、HmacSHA3、NTLM、HmacNTLM、一键哈希等。
+
+<div align=center><img src=images/image-20240617180257634.png width=80% ></div>
+
+一键哈希可实现对输入的字符，进行所有的哈希计算并输出结果。
+
+<div align=center><img src=images/image-20240617180402999.png width=80% ></div>
+
+**3、加密解密**：AES加解密、RSA加解密、SM2加解密、SM4加解密、DES加解密、3DES加解密、Xor加解密、RC4加解密、Rabbit加解密、自动生成RSA秘钥、自动生成SM2秘钥等
+
+<div align=center><img src=images/image-20240617180635476.png width=80% ></div>
+
+<div align=center><img src=images/image-20240617180748714.png width=80% ></div>
+
+**4、国密算法**：SM2椭圆曲线非对称加密算法、SM4分组对称密码算法、SM3密码杂凑算法、并支持自动生成SM2秘钥。
+
+<div align=center><img src=images/image-20240617180836752.png width=80% ></div>
+
+**5、数据格式化**：JSON格式化与压缩、XML格式化与压缩、IP地址与整数互转、String.fromCharCode、Unix时间戳互转、文本去除重复行、字母大小写、生成各类随机字符串、字符串反转
+
+<div align=center><img src=images/image-20240617181019264.png width=80% ></div>
+
+<div align=center><img src=images/image-20240617181053649.png width=80% ></div>
+
+**6、其他**：JWT解析与弱密码、一键解密所有OA
+
+<div align=center><img src=images/image-20240617181132609.png width=80% ></div>
+
+#### 13、上线反弹
 
 TscanPlus内置各类反弹shell命令85条、MSF生成命令21条、CS免杀上线命令等，可根据shell类型、操作系统类型、监听类型自动生成代码。
 
@@ -572,7 +659,7 @@ CS上线配置CS Payload地址后，即可生成相应代码。
 
 <div align=center><img src=images/image-20231221141838825.png width=80% ></div>
 
-#### 13、红队命令
+#### 14、红队命令
 
 TscanPlus内置常用红队命令，包括Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网命令18类、下载命令31条。
 
@@ -616,9 +703,17 @@ curl http://www.google.com/key.txt -o key.txt
 
 <div align=center><img src=images/image-20240111143548211.png width=80% ></div>
 
-#### 14、辅助工具
+#### 15、辅助工具
 
-TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密、字典生成等模块还在完善，后续会持续更新。
+TscanPlus内置资产分拣、Windows提权辅助、杀软查询等工具，目前shiro解密、字典生成等模块还在完善，后续会持续更新。
+
+##### **【资产分拣】**
+
+一键提取资产中的主域名、子域名、IP、URL、Tscan/Fscan结果，并提供收缩模式和C段分拣。
+
+**子域名&IP地址(收缩模式)是所有【未指定端口】的子域名和IP地址的集合。在收缩模式下，类似ip:port或domain:port这种指定端口的资产会被剔除。**
+
+<div align=center><img src=images/image-20240617181411005.png width=80% ></div>
 
 ##### **【密码生成】**
 
@@ -644,15 +739,8 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 
 <div align=center><img src=images/image-20231221142616501.png width=80% ></div>
 
-**【资产分拣】**
 
-可一键提取资产中的主域名、子域名、IP、URL、Tscan/Fscan结果。
-
-<div align=center><img src=images/image-20240417162102818.png width=80% ></div>
-
-
-
-#### 15、其他功能
+#### 16、其他功能
 
 #####  **【导出功能】**
 
@@ -672,27 +760,27 @@ TscanPlus内置Windows提权辅助、杀软查询等工具，目前shiro解密�
 
 可对所有数据进行持久存储和使用。默认DB文件会在config文件下生成。
 
-<div align=center><img src=images/image-20240327165547238.png  width=80% ></div>
+<div align=center><img src=images/image-20240327165547238.png width=80% ></div>
 
 ##### 【配置管理】
 
 对各功能配置参数写入配置文件，参数修改后只要执行一次相应功能就会写入配置文件，下次无需再次修改。
 
-<div align=center><img src=images/image-20240327165714901.png  width=80% ></div>
+<div align=center><img src=images/image-20240327165714901.png width=80% ></div>
 
 红队命令、上线命令、默认密码等可自定义添加，并保存在配置文件。
 
-<div align=center><img src=images/image-20240327165814782.png  width=80% ></div>
+<div align=center><img src=images/image-20240327165814782.png width=80% ></div>
 
 ##### 【主题设置】
 
 增加系统主题设定，在任意页面打开"高级配置"，可对系统主题进行配置，选择深色或浅色模式。（该功能基于wails框架，mac兼容较好，在windows部分系统上应用可能存在问题）
 
-<div align=center><img src=images/image-20240327165922789.png  width=80% ></div>
+<div align=center><img src=images/image-20240327165922789.png width=80% ></div>
 
 Mac系统下的的深色和浅色主题对比。
 
-<div align=center><img src=images/image-20240327172657687.png  width=80% ></div>
+<div align=center><img src=images/image-20240327172657687.png width=80% ></div>
 
 ### 软件下载
 
