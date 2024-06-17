@@ -76,6 +76,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
         * 【下载命令】
         * 【java编码】
     * [辅助工具](#15辅助工具)
+        * 【资产分拣】
         * 【密码生成】
         * 【密码查询】
         * 【提权辅助】
@@ -587,7 +588,7 @@ URLFinder功能可对目标信息进行快速、全面的提取，可用于分�
 
 <div align=center><img src=images/image-20240327163203001.png width=80% ></div>
 
-#### 12、编解解码
+#### 12、编码解码
 
 编解码功能模块实现了编码解码、哈希计算、加密解密、国密算法、数据格式化、其他转换等共36种类型，其中编码解码类8种、哈希计算13种、加密解密9种、国密算法3种、数据格式化9种、其他2种。
 
@@ -795,9 +796,6 @@ Github下载：https://github.com/TideSec/TscanPlus/releases    知识星球：�
 
 
 <div align=center><img src=images/zsxq.png width=50% ></div>
-
-
-
 
 
 
