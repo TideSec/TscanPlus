@@ -1,22 +1,21 @@
 
 
+
 <div align=center><img src=images/TscanPlus.png width=50% ></div>
 
 
 ## 无影(TscanPlus)
 一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。
 
-**【主要功能】** 端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、域名探测、网络空探、项目管理等。
+**【主要功能】** 端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、UrlFinder、域名探测、网络空探、项目管理等。
 
-**【辅助功能】** 编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成、JAVA编码、资产分拣等。
+**【辅助功能】** 编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成、JAVA编码、资产分拣、Hots碰撞、40xBypass、Jwt破解、Ip归属地查询等。
 
 https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f33d032a23e
 
 <video controls="controls" loop="loop" autoplay="autoplay"> 
     <source src="images/TscanPlus-Introduce.mp4" type="video/mp4">
 </video>
-
-
 在2019年就用Python写过指纹识别工具——[TideFinger](https://github.com/TideSec/TideFinger)，并实现了一个免费在线的指纹检测平台——潮汐指纹[http://finger.tidesec.com](http://finger.tidesec.com)， 目前已积累用户3万余人，每日指纹识别约2000余次，2023年初又基于Go语言开发了Go版的[TideFinger_Go](https://github.com/TideSec/TideFinger_Go)，在web指纹和服务指纹的识别方面积累了一些经验。后来我们团队内部大佬基于Fscan开发了一个Tscan，主要是用于内部的POC收集整理并形成自动化武器库，可基于指纹识别结果对poc进行精准检测。无影(TscanPlus)就是以指纹和Poc为根基，扩展了多项自动化功能，可大大提高安全运维和安全检测的效率，方便网络安全从业者使用。
 
 **【特色功能】**
@@ -39,7 +38,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 9、快速的子域名探测，域名可联动其他子功能，可配置key后对接多个网络空间探测平台，一键查询去重。
 
-10、内置资产分拣、Windows提权辅助、杀软查询、shiro解密、编码解码等各类工具。
+10、内置资产分拣、JsFinder、Host碰撞、Jwt秘钥破解、IP查询、Windows提权辅助、杀软查询、shiro解密等各类工具。
 
 **【免责声明&使用许可】**
 
@@ -65,23 +64,27 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
     * [POC检测](#7POC检测)
     * [密码破解](#8密码破解)
     * [空间测绘](#9空间测绘)
-    * [目录枚举](#10目录枚举)
-    * [UrlFinder](#11UrlFinder)
-    * [编码解码](#12编码解码)
-    * [上线反弹](#13上线反弹)
-        * 【反弹shell】
-        * 【CS上线】
-    * [红队命令](#14红队命令)
+    * [编码解码](#10编码解码)
+    * [轻武器库](#11轻武器库)
+        * 【目录枚举】
+        * 【UrlFinder】
+        * 【Host碰撞】
+        * 【40xBypass】
+        * 【Jwt解码及破解】
+        * 【IP归属查询】
+    * [红队命令](#12红队命令)
         * 【红队命令】
         * 【下载命令】
         * 【java编码】
-    * [辅助工具](#15辅助工具)
+        * 【反弹shell】
+        * 【CS上线】
+    * [辅助工具](#13辅助工具)
         * 【资产分拣】
         * 【密码生成】
         * 【密码查询】
         * 【提权辅助】
         * 【杀软查询】
-    * [其他功能](#16其他功能)
+    * [其他功能](#14其他功能)
         * 【导出功能】
         * 【数据库管理】
         * 【配置管理】
@@ -93,6 +96,39 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 ### 更新日志
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
+
+v2.2版 【2024.07.16】 
+
+	1、增加Host碰撞功能 @Baal 
+	2、增加40xBypass检测功能 
+	3、增加Jwt破解和加解密功能 @yhy
+	4、增加Vip认证(可解锁所有Poc)
+	5、增加IP归属地查询功能
+	6、增加指纹策略，可根据需求选择不同指纹库
+	7、新目录下程序无法启动bug @T-T
+	8、Telnet蜜罐出现误报情况 @.
+	9、配置文件重置时会先自动备份
+	10、Poc输出日志改为倒序 @魚丸
+	11、查看Poc数据包调整到右键菜单 @wuha
+	12、增加一键Hash识别功能 @Scappy
+	13、JsFinder个别链接爬不出js @古心静典 
+	14、针对hunter可自定义API地址 @starscow
+	15、RDP爆破多线程误报问题 @ℍℤ
+	16、端口策略显示问题 @slack @.
+	17、红队命令模块能加编辑功能 @1
+	18、资产分拣匹配国外域名 @倏尔
+	19、目录字典不存在时扫描闪退 @Xxinbbyy
+	20、恢复扫描可能导致数据重复 @鼎级FW
+	21、针对Mac/Linx增加Ulimit设置
+	22、新建项目时出现重复项目数据 @Evi10x01 @大反派
+	23、目录扫描时对目录前缀"/"进行处理 @Zxc123456zxc
+	24、Jwt破解及显示bug @cloud- @大反派
+	25、qqwry库文件缺失提醒 @天明
+	26、资产提取匹配xyz等域名 @肖肖乐 
+	27、poc闪退问题 @老梁 @望天
+	28、poc检测存在误报  @J1wa @Hem1ock
+	29、目录扫描针对特殊站点的跳转bug @づ听风看月
+	30、Key认证bug @SinkO @Xxinbbyy @朱瀚声 @이 소
 
 v2.1版 【2024.07.01】 
 
@@ -350,6 +386,36 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 
 <div align=center><img src=images/image-20240327171101515.png width=80% ></div>
 
+**【Key认证功能】**
+
+为了"无影(TscanPlus)"的Poc检测更全面、精准，能形成良性生态，新增key认证功能。
+
+经过key认证后，可使用所有内置POC，未认证用户只能使用420个POC，其他功能均可正常使用。
+
+<div align=center><img src=images/image-20240721003109091.png width=80% ></div>
+
+通过key认证后，可使用所有内置的1300个poc。
+
+<div align=center><img src=images/image-20240721012102311.png width=80% ></div>
+
+**获取Key的三条途径:**
+
+（1）在Poc平台提交3个Poc后可获得3个Key，之后每多提交一个Poc可多获得一个Key。
+
+（2）在交流群或Github Issue中提交一个有效Bug，Bug修复后可获得一个Key。
+
+（3）加入星球可直接获得3个Key，之后每提交一个Poc可多获得一个Key。
+
+**关于Key认证问题**
+
+（1）只有初次进行Key校验的时候才需要联网(连接到poc.tidesec.com)认证，认证成功后不再需要再联网校验。
+
+（2）每个Key只能使用一个客户端，目前主要结合网卡等硬件序列号进行匹配，所以当硬件更换时可能导致认证失败。
+
+（3）Key认证只是为了能让poc使用和搜集形成良性循环，"取之于众，用之于众"，建议大家手头有poc的可以提交poc。
+
+**详细Key提交、获取和使用说明可看这里：http://poc.tidesec.com/index/explain.html**
+
 ####  3、项目管理
 
 项目管理功能是把各功能进行流程整合，用户可根据自己的使用场景设计项目功能，完美融合了"资产测绘"、"子域名枚举"、"IP端口扫描"、"密码破解"、"POC检测"、"URL扫描"、"目录探测"、"UrlFinder"等功能。项目执行结果会存储到相应项目数据库中，方便后续查询和使用。
@@ -455,11 +521,11 @@ TscanPlus自v2.1版本后，支持自定义指纹，包括被动指纹和主动�
 
 开启主动指纹探测后，在配置文件目录中，编辑`FingerDir.yaml`文件，即可添加主动探测指纹规则。每增加一条主动指纹，那么在指纹识别时，就会多发出一条http请求，量较大时会比较影响指纹识别效率，所以慎重添加。
 
-![image-20240701110500509](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20240701110500509.png)
+<div align=center><img src=images/image-20240701110500509.png width=80% ></div>
 
 在配置文件目录下，存在`Finger.json`文件，这是被动指纹识别的规则库，指纹库采用Wappalyzer格式，为方便实用自定义指纹，增加了headerstr和titlestr两个键，可分别进行header、title字符串的匹配。如自定义指纹和内置指纹重复，会优先使用自定义指纹。在添加自定义指纹后，先测试再使用！
 
-![image-20240701110842309](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20240701110842309.png)
+<div align=center><img src=images/image-20240701110842309.png width=80% ></div>
 
 **【扫描结果】**
 
@@ -579,51 +645,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20240327164931978.png width=80% ></div>
 
-#### 10、目录枚举
-
-目录枚举主要是对web站点进行目录枚举，支持字典模式、Fuzz模式、存活探测等，支持HEAD/GET方法，默认使用HEAD方法。
-
-**【任务配置】**
-
-字典默认使用dirsearch内置字典，大约9000条数据，扩展支持asp、aspx、jsp、php、py等格式，TideFuzz开启后会根据枚举结果进行递归Fuzz。
-
-如果使用Fuzz模式，需输入fuzz元字符，之后会根据fuzz长度生成字典，但注意fuzz字典不能过大，当字典超过10万行时会提示字典过大，无法扫描。
-
-还可以配置超时时间、超时重试次数、间隔时间、URL并发数、目录线程数等，并可以对扩展名、状态码进行过滤。
-
-**【扫描结果】**
-
-扫描结果如下，会显示发现的URL地址、状态码、Body长度等，选择某一行后，可查看Request和Response数据包。
-
-最下方会显示目标存活数量、枚举成功数量、检测队列情况、用时等。
-
-<div align=center><img src=images/image-20240219111318207.png width=80% ></div>
-
-#### 11、UrlFinder
-
-URLFinder功能可对目标信息进行快速、全面的提取，可用于分析页面中的js与url，查找隐藏在其中的敏感信息或未授权api接口。
-
-**【任务配置】**
-
-输入目标地址后，可进行模式选择，"普通模式"默认对单层链接进行抓取，"深入模式"会对链接进行三层抓取，耗时相对长一些。
-
-探测层数可设置探测的链接层数，上限数量是对URL总数进行限制，防止无限制爬取。
-
-"仅显示本站"是对URL和JS结果进行过滤，此外还可以配置线程数，并可以对扩展名、状态码、关键词进行过滤。
-
-**【扫描结果】**
-
-扫描结果如下，会显示发现的URL地址、状态码、Body长度等，当发现敏感信息时，会在"标题||敏感信息"列中显示。
-
-最下方会显示目标存活数量、枚举成功数量、检测队列情况、用时等。
-
-1、对返回同样长度、同样状态码的页面，出现5次以上不再显示
-
-2、增加关键字过滤、返回长度过滤、自定义后缀等功能。
-
-<div align=center><img src=images/image-20240327163203001.png width=80% ></div>
-
-#### 12、编码解码
+#### 10、编码解码
 
 编解码功能模块实现了编码解码、哈希计算、加密解密、国密算法、数据格式化、其他转换等共36种类型，其中编码解码类8种、哈希计算13种、加密解密9种、国密算法3种、数据格式化9种、其他2种。
 
@@ -679,23 +701,89 @@ URLFinder功能可对目标信息进行快速、全面的提取，可用于分�
 
 <div align=center><img src=images/image-20240617181132609.png width=80% ></div>
 
-#### 13、上线反弹
+#### 11、轻武器库
+
+##### 【目录枚举】
+
+目录枚举主要是对web站点进行目录枚举，支持字典模式、Fuzz模式、存活探测等，支持HEAD/GET方法，默认使用HEAD方法。
+
+**【任务配置】**
+
+字典默认使用dirsearch内置字典，大约9000条数据，扩展支持asp、aspx、jsp、php、py等格式，TideFuzz开启后会根据枚举结果进行递归Fuzz。
+
+如果使用Fuzz模式，需输入fuzz元字符，之后会根据fuzz长度生成字典，但注意fuzz字典不能过大，当字典超过10万行时会提示字典过大，无法扫描。
+
+还可以配置超时时间、超时重试次数、间隔时间、URL并发数、目录线程数等，并可以对扩展名、状态码进行过滤。
+
+**【扫描结果】**
+
+扫描结果如下，会显示发现的URL地址、状态码、Body长度等，选择某一行后，可查看Request和Response数据包。
+
+最下方会显示目标存活数量、枚举成功数量、检测队列情况、用时等。
+
+<div align=center><img src=images/image-20240219111318207.png width=80% ></div>
+
+##### 【UrlFinder】
+
+URLFinder功能可对目标信息进行快速、全面的提取，可用于分析页面中的js与url，查找隐藏在其中的敏感信息或未授权api接口。
+
+**【任务配置】**
+
+输入目标地址后，可进行模式选择，"普通模式"默认对单层链接进行抓取，"深入模式"会对链接进行三层抓取，耗时相对长一些。
+
+探测层数可设置探测的链接层数，上限数量是对URL总数进行限制，防止无限制爬取。
+
+"仅显示本站"是对URL和JS结果进行过滤，此外还可以配置线程数，并可以对扩展名、状态码、关键词进行过滤。
+
+**【扫描结果】**
+
+扫描结果如下，会显示发现的URL地址、状态码、Body长度等，当发现敏感信息时，会在"标题||敏感信息"列中显示。
+
+最下方会显示目标存活数量、枚举成功数量、检测队列情况、用时等。
+
+1、对返回同样长度、同样状态码的页面，出现5次以上不再显示
+
+2、增加关键字过滤、返回长度过滤、自定义后缀等功能。
+
+<div align=center><img src=images/image-20240327163203001.png width=80% ></div>
+
+
+
+##### 【Host碰撞】
+
+Host碰撞通过修改Host字段来发送数据包，该功能可对 IP和域名碰撞匹配，访问到绑定host才能访问的系统。因为现在越来越多的业 务是通过nginx等负载进行反向代理访问，可能有些内网域名和外网域名使用相同的 负载均衡进行反代，这样就可能通过修改host字段实现访问内网系统。
+
+<div align=center><img src=images/image-20240721003650858.png width=80% ></div>
+
+##### 【40xBypass】
+
+做渗透测试时常会碰到40x的资产，而有一些40x的页面是可以绕过的，比如不同的HTTP方法、Referer绕过、代理IP、HTTP Header修改、替换大小写等。40xBypass检测功能集成了8种常见bypass方式，并可在config/4xxBypass目录下修改字典文件。
+
+<div align=center><img src=images/image-20240721005116585.png width=80% ></div>
+
+##### 【Jwt解码及破解】
+
+可对jwt进行加解码和秘钥破解，支持HS256、HS384、HS512、RS256、RS384、RS512、ES256、EDDSA等多种算法。内置秘钥字典10W+，两秒可完成，
+
+<div align=center><img src=images/image-20240721010740227.png width=80% ></div>
+
+##### 【IP归属查询】
+
+针对ip地址、子域名等资产可自动提取，并查询物理地址。并在ip扫描、url探测、子域名枚举时，增加ip查询功能。
+
+<div align=center><img src=images/image-20240721010957230.png width=80% ></div>
+
+<div align=center><img src=images/image-20240721011103618.png width=80% ></div>
+
+
+
+
+
+
 
 TscanPlus内置各类反弹shell命令85条、MSF生成命令21条、CS免杀上线命令等，可根据shell类型、操作系统类型、监听类型自动生成代码。
 
-##### **【反弹shell】**
-
-可设置IP/PORT、listener类型、shell类型、是否编码，选择你想要的命令后，即可生成响应代码。
-
-<div align=center><img src=images/image-20231221141826648.png width=80% ></div>
-
-##### **【CS上线】**
-
-CS上线配置CS Payload地址后，即可生成相应代码。
-
-<div align=center><img src=images/image-20231221141838825.png width=80% ></div>
-
-#### 14、红队命令
+#### 12、红队命令
 
 TscanPlus内置常用红队命令，包括Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网命令18类、下载命令31条。
 
@@ -739,9 +827,21 @@ curl http://www.google.com/key.txt -o key.txt
 
 <div align=center><img src=images/image-20240111143548211.png width=80% ></div>
 
-#### 15、辅助工具
+##### **【反弹shell】**
 
-TscanPlus内置资产分拣、Windows提权辅助、杀软查询等工具，目前shiro解密、字典生成等模块还在完善，后续会持续更新。
+可设置IP/PORT、listener类型、shell类型、是否编码，选择你想要的命令后，即可生成响应代码。
+
+<div align=center><img src=images/image-20231221141826648.png width=80% ></div>
+
+##### **【CS上线】**
+
+CS上线配置CS Payload地址后，即可生成相应代码。
+
+<div align=center><img src=images/image-20231221141838825.png width=80% ></div>
+
+#### 13、辅助工具
+
+TscanPlus内置资产分拣、Windows提权辅助、杀软查询等工具。
 
 ##### **【资产分拣】**
 
@@ -776,7 +876,7 @@ TscanPlus内置资产分拣、Windows提权辅助、杀软查询等工具，目�
 <div align=center><img src=images/image-20231221142616501.png width=80% ></div>
 
 
-#### 16、其他功能
+#### 14、其他功能
 
 #####  **【导出功能】**
 
@@ -840,14 +940,22 @@ Github下载：https://github.com/TideSec/TscanPlus/releases    知识星球：�
 工具开发中参考了很多知名的Go检测工具和指纹识别软件，在此一并感谢。
 
 - YHY大佬的承影项目：https://github.com/yhy0/ChYing 
+- qwtd大佬的Slack项目：https://github.com/qiwentaidi/Slack
 - 影舞者大佬的fscan项目：https://github.com/shadow1ng/fscan 
 - zhzyker大佬的dismap项目：https://github.com/zhzyker/dismap 
 - ServerScan项目：https://github.com/Adminisme/ServerScan 
-- Dirsearch项目：https://github.com/maurosoria/dirsearch 
 
 ### FAQ
 
-**1、MacOS安装问题**
+**1、关于Key认证问题**
+
+（1）只有初次进行Key校验的时候才需要联网(连接到poc.tidesec.com)认证，认证成功后不再需要再联网校验。
+
+（2）每个Key只能使用一个客户端，目前主要结合网卡等硬件序列号进行匹配，所以当硬件更换时可能导致认证失败。
+
+（3）Key认证只是为了能让poc使用和搜集形成良性循环，"取之于众，用之于众"，建议大家手头有poc的可以提交poc。
+
+**2、MacOS安装问题**
 
 Mac上可能遇到不少执行问题，如「xxx已损坏，无法打开，您应该将它移到废纸篓」、「打不开xxx，因为 Apple 无法检查其是否包含恶意软件」、「打不开 xxx，因为它来自身份不明的开发者」，可参考下面两篇文章，基本能解决95%的问题。
 
@@ -863,11 +971,11 @@ https://sysin.org/blog/macos-if-crashes-when-opening/    【macOS 提示：“�
 
 `sudo codesign --sign - --force --deep TscanPlus_darwin_amd64_v1.0.app`
 
-**2、Windows依赖WebView2环境**
+**3、Windows依赖WebView2环境**
 
 Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)，而默认情况下Windows11和win2012会安装，但有些旧机器(如Win2k8)不会，如机器没有webview2环境，程序会引导下载安装webview2。也可自行手动下载：https://developer.microsoft.com/en-us/microsoft-edge/webview2。
 
-**3、Linux版运行报错**
+**4、Linux版运行报错**
 
 Linux版（AMD64和Arm64版本）是基于Kali 2023.01系统进行编译，经测试可兼容Kali2023之后版本以及Ubuntu22.04。
 
@@ -879,13 +987,15 @@ Linux版（AMD64和Arm64版本）是基于Kali 2023.01系统进行编译，经�
 
 不过Linux的库依赖问题就是个玄学，不建议过度折腾，建议Kali2023之后版本以及Ubuntu22.04。
 
-**4、Windows杀软报病毒问题**
+**5、Windows杀软报病毒问题**
 
 程序使用Go开发，Windows版本使用upx进行了加壳，杀软可能会报毒，请自行排查。
 
-**5、程序打开后看不到上方标签栏**
+**6、程序打开后看不到上方标签栏**
+
+目前已经在欢迎页面增加"全屏"按钮，方便windows用户一键最大化。
 
 在个别电脑上打开后，只能看到TscanPlus的中间部分，看不到上方标签栏，这可能是由于电脑分辨率较低或设置了缩放率而导致。这时需要将分辨率修改为1440*1080以上，同时将缩放率修改为100%即可。
 
-**6、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
+**7、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
 
