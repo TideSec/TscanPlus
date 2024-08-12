@@ -99,6 +99,8 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
+v2.3版 【2024.08.12】 升级框架、增加Log功能、资源占用优化、空间探测算法优化等
+
 v2.2版 【2024.07.22】 增加1300+Poc、Key认证、Host碰撞、40xBypass检测、Jwt破解和加解密、IP归属查询等
 
 v2.1版 【2024.07.01】 增加自定义被动指纹、程序中断恢复、自定义header信息、导出资产excel高危标红等
