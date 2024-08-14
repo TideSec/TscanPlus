@@ -781,3 +781,8 @@ Linux版（AMD64和Arm64版本）是基于Kali 2023.01系统进行编译，经�
 
 **7、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
 
+
+
+### Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=TideSec/TscanPlus&type=Date)](https://star-history.com/#TideSec/TscanPlus&Date)
