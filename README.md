@@ -77,6 +77,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
     * [红队命令](#12红队命令)
         * 【红队命令】
         * 【下载命令】
+        * 【Websehll】
         * 【java编码】
         * 【反弹shell】
         * 【CS上线】
@@ -91,6 +92,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
         * 【数据库管理】
         * 【配置管理】
         * 【主题设置】
+        * 【日志功能】
 * [软件下载](#软件下载)
 * [致谢](#致谢)
 * [FAQ](#FAQ)
@@ -98,6 +100,8 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 ### 更新日志
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
+
+v2.4版 【2024.09.01】 防误报算法优化升级、新增webshell生成、密码破解漏报和闪退修复等
 
 v2.3版 【2024.08.12】 升级框架、增加Log功能、资源占用优化、空间探测算法优化等
 
@@ -583,6 +587,12 @@ Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网�
 
 <div align=center><img src=images/image-20231221142332714.png width=80% ></div>
 
+##### **【Webshell】**
+
+内置各种语言的基本一句话webshell和部分免杀马，以及冰蝎、蚁剑、哥斯拉等常见webshell的免杀马，共安全人员参考。
+
+<div align=center><img src=images/image-20240830151318754.png width=80% ></div>
+
 #####  **【java编码】**
 
 有时，通过 `Runtime.getRuntime().exec()` 执行命令有效负载会导致失败。使用 WebShell，反序列化利用或通过其他媒介时，可能会发生这种情况。
@@ -699,6 +709,12 @@ TscanPlus内置资产分拣、Windows提权辅助、杀软查询等工具。
 Mac系统下的的深色和浅色主题对比。
 
 <div align=center><img src=images/image-20240327172657687.png width=80% ></div>
+
+##### 【日志功能】
+
+增加日志功能，在About页面右侧可实时显示最新程序日志，该日志文件默认存储于“高级配置”—“导出目录”文件夹下，文件名为`TscanPlus-Result.txt`。
+
+<div align=center><img src=images/image-20240830151748990.png width=80% ></div>
 
 ### 软件下载
 
