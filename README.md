@@ -101,6 +101,8 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
+v2.6版 【2024.10.18】 增加程序自动更新、密码破解结果连接验证、内置poc增至2300+等
+
 v2.5版 【2024.09.15】 重构端口扫描模块，效率提升2-3倍、Poc检测资源占用高等修复等
 
 v2.4版 【2024.09.01】 防误报算法优化升级、新增webshell生成、密码破解漏报和闪退修复等
@@ -192,7 +194,7 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 
 （2）在交流群或Github Issue中提交一个有效Bug，Bug修复后可获得一个Key。
 
-（3）加入星球可直接获得3个Key，之后每提交一个Poc可多获得一个Key。
+（3）加入星球可直接获得3个Key，每隔三个月可重置一次key，之后每提交一个Poc可多获得一个Key。
 
 **关于Key认证问题**
 
@@ -409,6 +411,14 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20231221140432486.png width=80% ></div>
 
+在TscanPlus v2.6之后版本中，新增密码破解结果连接验证功能，可对破解发现的弱口令进行连接校验，支持十多种常见协议。
+
+![mysql](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/mysql.png)
+
+![ssh](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/ssh.png)
+
+
+
 #### 9、空间测绘
 
 为使信息搜集更快捷方便，TscanPlus集成了多个网络空间测绘接口，包括鹰图**Hunter、Fofa、shodan、360 Quake、Zoomeye 钟馗之眼、Censys、微步在线ThreatBook、BinaryEdge、VirusTotal**等9个主流空探API，可根据域名、IP地址、端口、应用、服务等进行检索，并对各网络空探结果进行去重整合。
@@ -432,6 +442,10 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 选择某一行或多行，右键菜单也可对某地址进行单独POC测试、目录枚举、端口扫描等，也可以对数据进行单条保存或全部保存。
 
 <div align=center><img src=images/image-20240327164931978.png width=80% ></div>
+
+支持自定义语法，但由于每种测绘引擎都有不同语法，自定义语法一般无法通用。
+
+![image-20241018143704418](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20241018143704418.png)
 
 #### 10、编码解码
 
