@@ -1,6 +1,7 @@
 
 
 
+
 <div align=center><img src=images/TscanPlus.png width=50% ></div>
 
 
@@ -413,9 +414,9 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 在TscanPlus v2.6之后版本中，新增密码破解结果连接验证功能，可对破解发现的弱口令进行连接校验，支持十多种常见协议。
 
-![mysql](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/mysql.png)
+<div align=center><img src=images/mysql.png width=80% ></div>
 
-![ssh](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/ssh.png)
+<div align=center><img src=images/ssh.png width=80% ></div>
 
 
 
@@ -445,7 +446,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 支持自定义语法，但由于每种测绘引擎都有不同语法，自定义语法一般无法通用。
 
-![image-20241018143704418](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20241018143704418.png)
+<div align=center><img src=images/image-20241018143704418.png width=80% ></div>
 
 #### 10、编码解码
 
@@ -818,3 +819,4 @@ Linux版（AMD64和Arm64版本）是基于Kali 2023.01系统进行编译，经�
 ### Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=TideSec/TscanPlus&type=Date)](https://star-history.com/#TideSec/TscanPlus&Date)
+
