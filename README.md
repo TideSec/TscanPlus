@@ -788,7 +788,17 @@ https://sysin.org/blog/macos-if-crashes-when-opening/    【macOS 提示：“�
 
 **3、Windows依赖WebView2环境**
 
-Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)，而默认情况下Windows11和win2012会安装，但有些旧机器(如Win2k8)不会，如机器没有webview2环境，程序会引导下载安装webview2。也可自行手动下载：https://developer.microsoft.com/en-us/microsoft-edge/webview2。
+Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download)
+
+默认情况下Windows11和win2012会安装，但有些旧机器(如Win2k8)不会，如机器没有webview2环境，程序会引导下载安装webview2。
+
+可自行手动下载：https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download
+
+如果执行后遇到报错`The WebView2 process crashed and the application needs to be restarted.`
+
+<div align=center><img src=images/21.png width=50% ></div>
+
+此时需要卸载本机webview2后重新安装：https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download
 
 **4、Linux版运行报错**
 
@@ -799,6 +809,32 @@ Linux版（AMD64和Arm64版本）是基于Kali 2023.01系统进行编译，经�
 （1）报错信息：`libc.so.6: version 'GLIBC_2.34' not found`，此时需额外安装libc6库，可参考https://blog.csdn.net/huazhang_001/article/details/128828999
 
 （2）报错信息：`libwebkit2gtk-4.0.so.37: cannot open shared object file`，此时需要安装`libwebkit2gtk`库，ubuntu下可尝试执行`apt-get install libwebkit2gtk-4.0-dev`
+
+如果安装`apt-get install libwebkit2gtk-4.0-dev`时报错
+
+```
+apt install libwebkit2gtk-4.0-dev
+Error: Unable to locate package libwebkit2gtk-4.0-dev
+Error: Couldn't find any package by glob 'libwebkit2gtk-4.0-dev'
+```
+
+那么需要依次执行`vi /etc/apt/sources.list`
+
+在`/etc/apt/sources.list`文件中加入这行
+```
+deb http://gb.archive.ubuntu.com/ubuntu jammy main   
+```
+之后再执行
+```
+apt update
+apt install libwebkit2gtk-4.0-dev
+```
+
+如果`apt update`更新报错  `Warning: GPG error: http://gb.archive.ubuntu.com/ubuntu jammy InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 871920D1991BC93C`
+
+那么需要执行`apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  871920D1991BC93C`，注意更换最后的Key。
+
+之后再执行`apt update`和`apt install libwebkit2gtk-4.0-dev`即可，`libwebkit2gtk-4.0-dev`安装成功后即可正常打开。
 
 不过Linux的库依赖问题就是个玄学，不建议过度折腾，建议Kali2023之后版本以及Ubuntu22.04。
 
