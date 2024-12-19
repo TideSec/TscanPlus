@@ -802,7 +802,7 @@ Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://de
 
 **4、Linux版运行报错**
 
-Linux版（AMD64和Arm64版本）是基于Kali 2023.01系统进行编译，经测试可兼容Kali2023之后版本以及Ubuntu22.04。
+Linux版（AMD64和Arm64版本）是基于Kali 2023/2024系统进行编译，经测试可兼容Kali2023之后版本以及Ubuntu22.04。
 
 对Ubuntu22.04之前的系统，可能出现的报错：
 
@@ -834,7 +834,25 @@ apt install libwebkit2gtk-4.0-dev
 
 那么需要执行`apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  871920D1991BC93C`，注意更换最后的Key。
 
-之后再执行`apt update`和`apt install libwebkit2gtk-4.0-dev`即可，`libwebkit2gtk-4.0-dev`安装成功后即可正常打开。
+之后再执行`apt update`。
+
+如果执行`apt install libwebkit2gtk-4.0-dev`时提示
+```
+libturbojpeg0 : conflicts: libjpeg-turbo8 but 2.1.2-0ubuntu1 is to be installed
+E: Error, pkgProblemResolver ::Resolve generated breaks, this may be caused byheld packages.
+```
+<div align=center><img src=images/image-20241218143050793.png width=50% ></div>
+
+那么需要依次执行下面命令
+```
+apt-get remove libjpeg-turbo8
+apt-get remove libturbojpeg0
+```
+之后再执行`apt install libwebkit2gtk-4.0-dev`即可，`libwebkit2gtk-4.0-dev`安装成功后即可正常打开。
+
+`libwebkit2gtk-4.0-dev`安装成功后，使用`apt list | grep libwebkit2gtk`命令应可以看到`libwebkit2gtk-4.0-dev`库已被成功安装。
+
+<div align=center><img src=images/image-20241218143353349.png width=50% ></div>
 
 不过Linux的库依赖问题就是个玄学，不建议过度折腾，建议Kali2023之后版本以及Ubuntu22.04。
 
