@@ -788,17 +788,39 @@ https://sysin.org/blog/macos-if-crashes-when-opening/    【macOS 提示：“�
 
 **3、Windows依赖WebView2环境**
 
+**（1）系统缺少WebView2环境**
+
 Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download)
 
 默认情况下Windows11和win2012会安装，但有些旧机器(如Win2k8)不会，如机器没有webview2环境，程序会引导下载安装webview2。
 
 可自行手动下载：https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download
 
+**（2）安装了WebView2但执行报错**
+
 如果执行后遇到报错`The WebView2 process crashed and the application needs to be restarted.`
 
 <div align=center><img src=images/21.png width=50% ></div>
 
 此时需要卸载本机webview2后重新安装：https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download
+
+**（3）webview2无法卸载重装**
+
+如果webview2无法卸载，这时需要借助一个小工具[【Windows11轻松设置】](https://github.com/TideSec/TscanPlus/blob/main/soft/Windows11_Tools.7z)
+
+<div align=center><img src=https://github.com/user-attachments/assets/3d950d77-a188-4bb2-b8e9-1b1f1acdb8d8 width=70% ></div>
+
+<div align=center><img src=https://github.com/user-attachments/assets/5a4da4be-7d37-4c3b-af1e-193e43a74cad width=70% ></div>
+
+借助该工具可对webview2进行彻底卸载，之后再重新安装即可。
+
+**（4）重装后仍无法打开的情况**
+
+如果在webview2重装后仍无法打开，没有任何提示，可能是webview2和某些特定版本的windows系统再加上wails的go-webview2库融合导致的Bug，为此，在这里专门打包了一个针对webview2问题的改进版，可以尝试一下。
+
+<div align=center><img src=https://github.com/user-attachments/assets/15d0c7f2-76c1-4359-8556-8f5232158f2b width=70% ></div>
+
+<div align=center><img src=https://github.com/user-attachments/assets/f5a0bd0a-2c26-45f9-96e0-4471b7e0db83 width=70% ></div>
 
 **4、Linux版运行报错**
 
