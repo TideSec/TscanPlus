@@ -804,7 +804,9 @@ Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://de
 
 Linux版（AMD64和Arm64版本）是基于Kali 2023/2024系统进行编译，经测试可兼容Kali2023之后版本以及Ubuntu22.04。
 
-对Ubuntu22.04之前的系统，可能出现的报错：
+**另外，Linux版执行要在桌面环境下执行，ssh远程连接环境是没法执行的。**
+
+对Ubuntu22.04之前的系统和部分Kali2024.03，可能出现的报错：
 
 （1）报错信息：`libc.so.6: version 'GLIBC_2.34' not found`，此时需额外安装libc6库，可参考https://blog.csdn.net/huazhang_001/article/details/128828999
 
