@@ -4,9 +4,11 @@
 
 <div align=center><img src=images/TscanPlus.png width=50% ></div>
 
-[English][url-docen]
 
 ## 无影(TscanPlus)
+
+[English][url-docen] [中文说明][url-doczh]
+
 一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。
 
 **【主要功能】** 端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、UrlFinder、域名探测、网络空探、项目管理等。
