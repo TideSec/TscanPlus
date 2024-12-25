@@ -4,6 +4,7 @@
 
 <div align=center><img src=images/TscanPlus.png width=50% ></div>
 
+[English][url-docen]
 
 ## 无影(TscanPlus)
 一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。
@@ -75,6 +76,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
         * 【40xBypass】
         * 【Jwt解码及破解】
         * 【IP归属查询】
+        * 【代理池功能】
     * [红队命令](#12红队命令)
         * 【红队命令】
         * 【下载命令】
@@ -582,7 +584,7 @@ Host碰撞通过修改Host字段来发送数据包，该功能可对 IP和域名
 
 
 
-##### 【代理池管理功能】
+##### 【代理池功能】
 
 代理池目前主要包括：添加代理、自动爬取代理、代理场景切换、代理验证、代理Listener管理等功能。
 
