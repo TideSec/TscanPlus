@@ -910,4 +910,4 @@ apt-get remove libturbojpeg0
 
 [![Star History Chart](https://api.star-history.com/svg?repos=TideSec/TscanPlus&type=Date)](https://star-history.com/#TideSec/TscanPlus&Date)
 
-[url-docen] : README_EN.md
+[url-docen]: README_EN.md
