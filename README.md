@@ -7,7 +7,7 @@
 
 ## 无影(TscanPlus)
 
-[TscanClient 是TscanPlus的命令行版][url-TscanClient] 
+[TscanClient 介绍(命令行版) ][url-TscanClient] 
 
 [English Introduction][url-docen] 
 
