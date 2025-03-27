@@ -608,7 +608,7 @@ Host碰撞通过修改Host字段来发送数据包，该功能可对 IP和域名
 
 在开启代理Listener后，可配合不同代理切换模式，轮训、遍历代理池中的所有可用代理，提供代理给无影或其他外部应用进行使用。
 
-详细用法介绍可参考：[【无影v2.6.5—代理池管理功能上线】](https://github.com/TideSec/TscanPlus/blob/main/%E6%97%A0%E5%BD%B1v2.6.5%E2%80%94%E4%BB%A3%E7%90%86%E6%B1%A0%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF.md)
+详细用法介绍可参考：[【无影代理池管理功能介绍】](https://github.com/TideSec/TscanPlus/blob/main/%E6%97%A0%E5%BD%B1v2.6.5%E2%80%94%E4%BB%A3%E7%90%86%E6%B1%A0%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF.md)
 
 <div align=center><img src=images/image-20241225095955306.png width=80% ></div>
 
