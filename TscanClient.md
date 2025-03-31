@@ -1,13 +1,16 @@
+
 # TscanClient
 
-`TscanClient`是`TscanPlus`的命令行版本，保留了`TscanPlus`的核心功能，包括端口扫描、URL指纹识别、POC漏洞验证、弱口令破解、目录扫描、JS敏感信息收集、子域名枚举以及网络资产测绘等功能模块。
+由于`无影(TscanPlus)`是基于`webview2`环境，所以在有些使用场景上相对受限，比如一些windows服务器或者linux命令行等，而且图形化占用资源相对较高，现在刚好正值`无影(TscanPlus)`正式版上线一年左右，Star数量恰好2k，应广大师傅需求便有了这版`TscanClient`。
 
-`TscanClient`与`TscanPlus`可以共享配置文件`config.yaml` 和数据库 `config.db`，且命令行版本能支持更多平台和系统，使用更加灵活便捷。
+`TscanClient`是`无影(TscanPlus)`的命令行版本，保留了`无影(TscanPlus)`的核心功能，包括端口扫描、URL指纹识别、POC漏洞验证、弱口令破解、目录扫描、JS敏感信息收集、子域名枚举以及网络资产测绘等功能模块。
+
+`TscanClient`与`无影(TscanPlus)`可以共享配置文件`config.yaml` 和数据库 `config.db`，且命令行版本能支持更多平台和系统，使用更加灵活便捷。
 
 ## 功能特点
 
 - **多功能集成**：提供端口扫描、漏洞验证、弱口令检测等多种安全检测功能，一站式解决安全评估需求
-- **高性能扫描**：采用高并发设计，支持大规模目标快速扫描
+- **高性能扫描**：采用高并发设计，支持大规模目标快速扫描（启发式扫描）
 - **精准识别**：集成丰富的指纹库和POC库，准确识别Web应用和常见漏洞
 - **可定制化**：支持自定义扫描策略，灵活配置扫描参数
 - **跨平台兼容**：命令行版本支持更多操作系统平台，使用更加灵活
@@ -19,13 +22,29 @@
 TscanClient 包含以下八个核心功能模块：
 
 1. 端口扫描
+
 2. URL指纹识别
+
 3. POC漏洞验证
+
 4. 弱口令破解
+
 5. 目录扫描
+
 6. JS敏感信息收集
+
 7. 子域名枚举
+
 8. 网络资产测绘
+
+## 适用场景
+
+- 内网安全评估和资产梳理
+- 外部渗透测试前的信息收集
+- 企业安全基线检查
+- 安全漏洞应急响应
+- 自动化安全扫描流程
+- 服务器环境下的批量扫描任务
 
 
 ## 参数详解与使用示例
@@ -40,7 +59,9 @@ TscanClient -m port,url,poc,crack,dir,js,domain,cyber [参数]
 
 其中`-m`是最重要的功能选择参数，控制是否开启`端口扫描(port)、web探测(url)、Poc检测(poc)、密码破解(crack)、目录枚举(dir)、JS敏感信息(js)、子域名枚举(domain)、空间测绘(cyber)`八大功能。
 
-多功能的联动等同于`TscanPlus`的项目管理，当八项功能都开启时，会以下面的流程进行检测，**前一项检测的所有结果都会输入给下一项检测作为输入**。
+![image-20250327204940289](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327204940289.png)
+
+多功能的联动等同于`无影(TscanPlus)`的项目管理，当八项功能都开启时，会以下面的流程进行检测，**前一项检测的所有结果都会输入给下一项检测作为输入**。
 
 **空间测绘(cyber) -> 子域名枚举(domain) ->  端口扫描(port) ->  密码破解(crack) ->  web探测(url) -> Poc检测(poc) -> 目录枚举(dir) -> JS敏感信息(js)**
 
@@ -50,7 +71,7 @@ TscanClient -m port,url,poc,crack,dir,js,domain,cyber [参数]
 
 2、`TscanClient`还会将八大功能模块的结果分别存放在独立的txt文档中，方便结果查看。
 
-3、`TscanClient`还会把所有结果保存到`config.db`中，该文件可以替换到`TscanPlus`的配置目录下，使用`TscanPlus`打开再利用。
+3、`TscanClient`还会把所有结果保存到`config.db`中，该文件可以替换到`无影(TscanPlus)`的配置目录下，使用`无影(TscanPlus)`打开再利用。
 
 除各单项功能外，最常用的几种组合模式：
 
@@ -67,7 +88,7 @@ TscanClient -m port,url,poc,crack,dir,js,domain,cyber [参数]
 | 参数         | 说明                                            | 默认值               |
 |------------|-----------------------------------------------|-------------------|
 | `-pr`      | 项目名称，可自定义，方便在数据库中保存                           | `Default`         |
-| `-m`       | 任务模块，可选：port,url,poc,crack,dir,js,domain,cyber | `port,poc,crack`  |
+| `-m`       | 任务模块，可选：port,url,poc,crack,dir,js,domain,cyber | `port,url,poc` |
 | `-o`       | 结果输出文件                                        | `TscanClient.txt` |
 | `-no`      | 禁用结果保存                                        | `false`           |
 | `-nocolor` | 禁用彩色输出                                        | `false`           |
@@ -95,19 +116,24 @@ TscanClient -h 192.168.1.1 -o scan-results.txt
 TscanClient -h 192.168.1.1 -nocolor -no
 ```
 
+![image-20250327205113571](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205113571.png)
+
 ### 端口扫描参数（port模块）
 
-| 参数       | 说明                                        | 默认值      |
-|----------|-------------------------------------------|----------|
-| `-h`     | 目标主机IP，例如: `192.168.1.1`,`192.168.1.1/24` | -        |
-| `-hn`    | 排除的主机范围，例如: -hn `192.168.1.1/24`          | -        |
-| `-p`     | 端口配置，例如: `22`或`1-65535`或`22,80,3306`      | Top100端口 |
-| `-pa`    | 在默认端口基础上添加端口，`-pa 3389`                   | -        |
-| `-hf`    | 主机列表文件                                    | -        |
-| `-portf` | 端口列表文件                                    | -        |
-| `-t`     | 线程数量                                      | `600`    |
-| `-time`  | 超时时间(秒)                                   | `3`      |
-| `-np`    | 禁用存活探测                                    | `false`  |
+| 参数       | 说明                                                      | 默认值     |
+| ---------- | --------------------------------------------------------- | ---------- |
+| `-h`       | 目标主机IP，例如: `192.168.1.1`,`192.168.1.1/24`          | -          |
+| `-hn`      | 排除的主机范围，例如: -hn `192.168.1.1/24`                | -          |
+| `-p`       | 端口配置，例如: `22`或`1-65535`或`22,80,3306`             | Top100端口 |
+| `-pa`      | 在默认端口基础上添加端口，`-pa 3389`                      | -          |
+| `-hf`      | 主机列表文件                                              | -          |
+| `-portf`   | 端口列表文件                                              | -          |
+| `-t`       | 线程数量                                                  | `600`      |
+| `-nosmart` | 禁用启发式大网段探测（默认针对C段以上CIDR启用启发式扫描） | `false`    |
+| `-si`      | 设置启发式扫描时要探测的ip                                | `1,254`    |
+| `-sp`      | 设置启发式扫描时端口探针                                  | `icmp,80`  |
+| `-time`    | 超时时间(秒)                                              | `3`        |
+| `-np`      | 禁用存活探测                                              | `false`    |
 
 **端口扫描使用示例：**
 
@@ -127,6 +153,8 @@ TscanClient -m port -hf hosts.txt -p 22,80,443
 # 在默认端口基础上添加自定义端口
 TscanClient -m port -h 192.168.1.1 -pa 8080,9000
 ```
+
+![image-20250328090134831](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250328090134831.png)
 
 ### Web应用扫描参数（url模块）
 
@@ -158,11 +186,13 @@ TscanClient -m url,poc -u http://example.com -proxy http://127.0.0.1:8080
 TscanClient -m url,poc -u http://example.com -wt 10
 ```
 
+![image-20250327205210338](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205210338.png)
+
 ### POC漏洞验证参数（poc模块）
 
 | 参数          | 说明                                         | 默认值         |
 |-------------|--------------------------------------------|-------------|
-| `-pocpath`  | POC文件路径，和`TscanPlus`一样，仅支持`xray 1.0`格式的Poc | -           |
+| `-pocpath`  | POC文件路径，和`无影(TscanPlus)`一样，仅支持`xray 1.0`格式的Poc | -           |
 | `-pocname`  | 使用包含指定名称的POC,例如: `-pocname weblogic`       | -           |
 | `-full`     | 不匹配指纹，完整POC扫描，默认匹配指纹后检测poc                 | `false`     |
 | `-num`      | POC并发数                                     | `20`        |
@@ -192,6 +222,8 @@ TscanClient -m poc -u http://example.com -num 50 -poclevel 1+2
 TscanClient -poclist
 
 ```
+
+![image-20250327205334302](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205334302.png)
 
 ### 弱口令检测参数（crack模块）
 
@@ -224,6 +256,8 @@ TscanClient -m crack -h 192.168.1.1 -p 22 -s ssh -user root,admin -pwd 123456,pa
 TscanClient -m crack -h 192.168.1.1 -p 22 -s ssh -c "id"
 ```
 
+![image-20250327205625564](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205625564.png)
+
 ### 子域名枚举参数（domain模块）
 
 | 参数     | 说明                | 默认值     |
@@ -235,7 +269,7 @@ TscanClient -m crack -h 192.168.1.1 -p 22 -s ssh -c "id"
 
 **子域名枚举使用示例：**
 
-**子域名枚举时默认是开启API查询的，但API的key需要在`config.yaml`文件中手动配置，也可把`TscanPlus`的配置文件拷贝过来直接使用。
+**子域名枚举时默认是开启API查询的，但API的key需要在`config.yaml`文件中手动配置，也可把`无影(TscanPlus)`的配置文件拷贝过来直接使用。
 **
 
 ```bash
@@ -251,6 +285,8 @@ TscanClient -m domain -df domains.txt -dc /path/to/subdomains.txt
 # 子域名枚举后进行指纹识别和漏洞扫描
 TscanClient -m domain,url,poc -d example.com
 ```
+
+![image-20250327205708209](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205708209.png)
 
 ### 目录扫描参数（dir模块）
 
@@ -273,6 +309,8 @@ TscanClient -m dir -u http://example.com -dd /path/to/dirlist.txt
 # 设置目录扫描线程数
 TscanClient -m dir -u http://example.com -ds 50 
 ```
+
+![image-20250327205753599](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205753599.png)
 
 ### JS敏感信息收集（js模块）
 
@@ -300,7 +338,7 @@ TscanClient -m dir -u http://example.com -ds 50
 
 **空间测绘使用示例：**
 
-**空间测绘API的key需要在`config.yaml`文件中手动配置，也可把`TscanPlus`的配置文件拷贝过来直接使用。**
+**空间测绘API的key需要在`config.yaml`文件中手动配置，也可把`无影(TscanPlus)`的配置文件拷贝过来直接使用。**
 
 ```bash
 # 查询特定域名的资产
@@ -336,6 +374,8 @@ TscanClient -h 192.168.1.0/24 -p 1-65535 -t 1000 -m port,url,poc,crack
 TscanClient -h 192.168.1.0/24 -d example.com -m port,url,poc,crack,dir,js,domain,cyber
 ```
 
+![image-20250327205918003](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205918003.png)
+
 ## 与TscanPlus的关系
 
 TscanClient 是 TscanPlus 的命令行版本，两者共享核心功能和检测引擎：
@@ -351,15 +391,6 @@ TscanClient 是 TscanPlus 的命令行版本，两者共享核心功能和检测
 - 建议先使用较小的线程数和端口范围进行测试，避免对目标系统造成过大负载
 - 针对生产环境进行扫描时，建议在非业务高峰期进行
 - 使用代理进行扫描时，请确保代理配置正确且稳定
-
-## 适用场景
-
-- 内网安全评估和资产梳理
-- 外部渗透测试前的信息收集
-- 企业安全基线检查
-- 安全漏洞应急响应
-- 自动化安全扫描流程
-- 服务器环境下的批量扫描任务
 
 更多信息可参考 TscanPlus 项目：[https://github.com/TideSec/TscanPlus](https://github.com/TideSec/TscanPlus)
 
