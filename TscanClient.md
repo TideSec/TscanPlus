@@ -1,4 +1,5 @@
 
+
 # TscanClient
 
 由于`无影(TscanPlus)`是基于`webview2`环境，所以在有些使用场景上相对受限，比如一些windows服务器或者linux命令行等，而且图形化占用资源相对较高，现在刚好正值`无影(TscanPlus)`正式版上线一年左右，Star数量恰好2k，应广大师傅需求便有了这版`TscanClient`。
@@ -59,7 +60,7 @@ TscanClient -m port,url,poc,crack,dir,js,domain,cyber [参数]
 
 其中`-m`是最重要的功能选择参数，控制是否开启`端口扫描(port)、web探测(url)、Poc检测(poc)、密码破解(crack)、目录枚举(dir)、JS敏感信息(js)、子域名枚举(domain)、空间测绘(cyber)`八大功能。
 
-![image-20250327204940289](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327204940289.png)
+<div align=center><img src=images/image-20250327204940289.png width=80% ></div>
 
 多功能的联动等同于`无影(TscanPlus)`的项目管理，当八项功能都开启时，会以下面的流程进行检测，**前一项检测的所有结果都会输入给下一项检测作为输入**。
 
@@ -116,7 +117,7 @@ TscanClient -h 192.168.1.1 -o scan-results.txt
 TscanClient -h 192.168.1.1 -nocolor -no
 ```
 
-![image-20250327205113571](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205113571.png)
+<div align=center><img src=images/image-20250327205113571.png width=80% ></div>
 
 ### 端口扫描参数（port模块）
 
@@ -154,7 +155,7 @@ TscanClient -m port -hf hosts.txt -p 22,80,443
 TscanClient -m port -h 192.168.1.1 -pa 8080,9000
 ```
 
-![image-20250328090134831](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250328090134831.png)
+<div align=center><img src=images/image-20250328090134831.png width=80% ></div>
 
 ### Web应用扫描参数（url模块）
 
@@ -186,7 +187,7 @@ TscanClient -m url,poc -u http://example.com -proxy http://127.0.0.1:8080
 TscanClient -m url,poc -u http://example.com -wt 10
 ```
 
-![image-20250327205210338](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205210338.png)
+<div align=center><img src=images/image-20250327205210338.png width=80% ></div>
 
 ### POC漏洞验证参数（poc模块）
 
@@ -225,7 +226,7 @@ TscanClient -poclist
 
 ```
 
-![image-20250327205334302](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205334302.png)
+<div align=center><img src=images/image-20250327205334302.png width=80% ></div>
 
 ### 弱口令检测参数（crack模块）
 
@@ -260,7 +261,7 @@ TscanClient -m crack -h 192.168.1.1 -p 22 -s ssh -user root,admin -pwd 123456,pa
 TscanClient -m crack -h 192.168.1.1 -p 22 -s ssh -c "id"
 ```
 
-![image-20250327205625564](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205625564.png)
+<div align=center><img src=images/image-20250327205625564.png width=80% ></div>
 
 ### 子域名枚举参数（domain模块）
 
@@ -290,7 +291,7 @@ TscanClient -m domain -df domains.txt -dc /path/to/subdomains.txt
 TscanClient -m domain,url,poc -d example.com
 ```
 
-![image-20250327205708209](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205708209.png)
+<div align=center><img src=images/image-20250327205708209.png width=80% ></div>
 
 ### 目录扫描参数（dir模块）
 
@@ -314,7 +315,7 @@ TscanClient -m dir -u http://example.com -dd /path/to/dirlist.txt
 TscanClient -m dir -u http://example.com -ds 50 
 ```
 
-![image-20250327205753599](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205753599.png)
+<div align=center><img src=images/image-20250327205753599.png width=80% ></div>
 
 ### JS敏感信息收集（js模块）
 
@@ -378,7 +379,7 @@ TscanClient -h 192.168.1.0/24 -p 1-65535 -t 1000 -m port,url,poc,crack
 TscanClient -h 192.168.1.0/24 -d example.com -m port,url,poc,crack,dir,js,domain,cyber
 ```
 
-![image-20250327205918003](/Users/xysoul/Tools/1-MyGitHub/TscanPlus/images/image-20250327205918003.png)
+<div align=center><img src=images/image-20250327205918003.png width=80% ></div>
 
 ## 与TscanPlus的关系
 
