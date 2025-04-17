@@ -192,6 +192,8 @@ TscanClient -m url,poc -u http://example.com -wt 10
 
 | 参数          | 说明                                         | 默认值         |
 |-------------|--------------------------------------------|-------------|
+| `-u`      | 目标URL                                 | -      |
+| `-uf`     | URL列表文件                               | -      |
 | `-pocpath`  | POC文件路径，和`无影(TscanPlus)`一样，仅支持`xray 1.0`格式的Poc | -           |
 | `-pocname`  | 使用包含指定名称的POC,例如: `-pocname weblogic`       | -           |
 | `-full`     | 不匹配指纹，完整POC扫描，默认匹配指纹后检测poc                 | `false`     |
@@ -207,10 +209,10 @@ TscanClient -m url,poc -u http://example.com -wt 10
 TscanClient -m poc -u http://example.com 
 
 # 使用指定POC检测漏洞，在检测到Poc时打印请求和响应数据包
-TscanClient -m poc -u http://example.com -pocname weblogic -pd
+TscanClient -m poc -uf url.txt -pocname weblogic -pd
 
 # 使用自定义POC路径
-TscanClient -m poc -u http://example.com -pocpath /path/to/pocs
+TscanClient -m poc -uf url.txt -pocpath /path/to/pocs
 
 # poc不匹配指纹，会检测所有内置poc
 TscanClient -m poc -u http://example.com -full
@@ -229,6 +231,8 @@ TscanClient -poclist
 
 | 参数       | 说明                         | 默认值      |
 |----------|----------------------------|----------|
+| `-h`     | 目标ip                       | -      |
+| `-hf`    | ip列表文件                     | -      |
 | `-br`    | 密码爆破线程数                    | `1`      |
 | `-s`     | 暴力破解的服务，例如: -s ssh,mysql   | `all`    |
 | `-user`  | 用户名，不指定时使用内置字典             | -        |
@@ -244,7 +248,7 @@ TscanClient -poclist
 TscanClient -m crack -h 192.168.1.1 -p 22 -s ssh
 
 # 使用自定义字典进行MySQL密码破解
-TscanClient -m crack -h 192.168.1.1 -p 3306 -s mysql -userf users.txt -pwdf pass.txt
+TscanClient -m crack -hf ip.txt -p 3306 -s mysql -userf users.txt -pwdf pass.txt
 
 # 增加爆破线程数
 TscanClient -m crack -h 192.168.1.1 -p 3389 -s rdp -br 5
@@ -332,9 +336,9 @@ TscanClient -m dir -u http://example.com -ds 50
 
 ### 空间测绘参数（cyber模块）
 
-| 参数    | 说明                                   | 默认值 |
-|-------|--------------------------------------|-----|
-| `-ck` | 空间测绘查询语句，例如：-ck domain="tidesec.com" | -   |
+| 参数    | 说明                                                  | 默认值 |
+|-------|-----------------------------------------------------|-----|
+| `-ck` | 空间测绘查询语句，例如：-ck domain="tidesec.com"，多个关键词可用逗号(,)分隔 | -   |
 
 **空间测绘使用示例：**
 
