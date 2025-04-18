@@ -82,7 +82,7 @@ TscanClient -m port,url,poc,crack,dir,js,domain,cyber [参数]
 
 3、子域名枚举 `-m domain,port,url,poc`
 
-注意：`如果资产太多，尽量不要开启太多功能，以免耗时太久或耗尽CPU资源。`
+注意：`如果资产太多，尽量不要开启太多功能，以免耗时太久或耗尽CPU资源。 `
 
 ### 通用参数
 
