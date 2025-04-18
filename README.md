@@ -934,7 +934,7 @@ apt-get remove libturbojpeg0
 
 <div align=center><img src=images/image-20250418103459726.png  width=50% ></div>
 
-这是`无影`需要联网下载配置文件，只需等待1分钟左右，提示重启程序即可。如果电脑无法联网，那么访问`https://gitee.com/tidesec/tscanplus-cfg/releases`手动下载最新配置，放到程序所在的`config`目录下即可。
+这是`无影`需要联网下载配置文件，只需等待1分钟左右，按提示重启程序即可使用所有功能。如果电脑无法联网，那么访问`https://gitee.com/tidesec/tscanplus-cfg/releases`手动下载最新配置，解压到程序所在的`config`目录下即可。
 
 **8、其他软件bug可提到Github的Issue或知识星球中，后续会逐一修复。**
 
