@@ -10,7 +10,7 @@ assignees: ''
 ### 📝 问题描述
 清晰简洁地描述您遇到的问题（例如：扫描结果错误、模块崩溃、功能异常等）
 
-提issue前，可先查阅FAQ(https://github.com/TideSec/TscanPlus?tab=readme-ov-file#FAQ)看能否解决您的问题。
+提issue前，可先查阅 [**FAQ**](https://github.com/TideSec/TscanPlus?tab=readme-ov-file#FAQ) 看能否解决您的问题。
 
 ### 🕹 复现步骤
 
