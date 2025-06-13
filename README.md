@@ -818,8 +818,6 @@ Github下载：https://github.com/TideSec/TscanPlus/releases    知识星球：�
 
 Mac上可能遇到不少执行问题，如「xxx已损坏，无法打开，您应该将它移到废纸篓」、「打不开xxx，因为 Apple 无法检查其是否包含恶意软件」、「打不开 xxx，因为它来自身份不明的开发者」，可参考下面两篇文章，基本能解决95%的问题。
 
-https://cloud.tencent.com/developer/article/2216717?areaId=106001  【苹果电脑安装软件后，提示mac文件已损坏,无法打开怎么办？】
-
 https://sysin.org/blog/macos-if-crashes-when-opening/    【macOS 提示：“应用程序” 已损坏，无法打开的解决方法总结】
 
 目前Mac遇到的比较多的就是闪退问题，执行下面的命令即可解决：

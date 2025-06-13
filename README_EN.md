@@ -818,7 +818,6 @@ During the development of this tool, many well-known Go detection tools and fing
 
 You may encounter several issues when executing the tool on macOS, such as "xxx is damaged and cannot be opened," "Apple cannot verify if xxx contains malicious software," or "xxx cannot be opened because it comes from an unidentified developer." The following articles can resolve about 95% of these issues:
 
-- [How to fix macOS software installation issues](https://cloud.tencent.com/developer/article/2216717?areaId=106001)  
 - [Fixing the "Application is damaged and cannot be opened" error on macOS](https://sysin.org/blog/macos-if-crashes-when-opening/)  
 
 A common issue on macOS is the app crashing or quitting unexpectedly. To resolve this, execute the following command:
