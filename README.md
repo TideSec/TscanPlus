@@ -2,6 +2,7 @@
 
 
 
+
 <div align=center><img src=images/TscanPlus.png width=50% ></div>
 
 
@@ -13,7 +14,7 @@
 
 一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。
 
-**【主要功能】** 端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、UrlFinder、域名探测、网络空探、项目管理等。
+**【主要功能】** 信息搜集、端口探测、服务识别、URL指纹识别、POC验证、弱口令猜解、目录扫描、UrlFinder、域名探测、网络空探、项目管理等。
 
 **【辅助功能】** 编码解码、加密解密、CS上线、反弹shell、杀软查询、提权辅助、常用命令、字典生成、JAVA编码、资产分拣、Hots碰撞、40xBypass、Jwt破解、Ip归属地查询等。
 
@@ -25,7 +26,6 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 在2019年就用Python写过指纹识别工具—— [TideFinger](https://github.com/TideSec/TideFinger) ，并实现了一个免费在线的指纹检测平台——潮汐指纹 [finger.tidesec.com](http://finger.tidesec.com) ， 目前已积累用户3万余人，每日指纹识别约2000余次，2023年初又基于Go语言开发了Go版的 [TideFinger_Go](https://github.com/TideSec/TideFinger_Go) ，在web指纹和服务指纹的识别方面积累了一些经验。后来我们团队内部大佬基于Fscan开发了一个Tscan，主要是用于内部的POC收集整理并形成自动化武器库，可基于指纹识别结果对poc进行精准检测。无影(TscanPlus)就是以指纹和Poc为根基，扩展了多项自动化功能，可大大提高安全运维和安全检测的效率，方便网络安全从业者使用。
 
-
 **【特色功能】**
 
 1、内置5.2W余条指纹数据，对1万个web系统进行指纹识别仅需8-10分钟，在效率和指纹覆盖面方面应该是目前较高的了。
@@ -34,7 +34,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 3、在创建IP端口扫描、Url扫描时，可关联Poc检测、密码破解、目录扫描等功能，发现匹配的服务或产品时会自动触发密码破解或poc检测。
 
-4、内置34种常见服务的弱口令破解，可方便管理员对内网弱口令进行排查，为提高检测效率，优选并精简每个服务的用户名和密码字典。覆盖的服务包括：SSH,RDP,SMB,MYSQL,SQLServer,Oracle,MongoDB,Redis,PostgreSQL,MemCached,Elasticsearch,FTP,Telnet,WinRM,VNC,SVN,Tomcat,WebLogic,Jboss,Zookeeper,Socks5,SNMP,WMI,LDAP,LDAPS,SMTP,POP3,IMAP,SMTP_SSL,IMAP_SSL,POP3_SSL,RouterOS,WebBasicAuth,Webdav,CobaltStrike等。
+4、内置48种常见服务的弱口令破解，可方便管理员对内网弱口令进行排查，为提高检测效率，优选并精简每个服务的用户名和密码字典。覆盖的服务包括：SSH,RDP,SMB,MYSQL,SQLServer,Oracle,MongoDB,Redis,PostgreSQL,MemCached,Elasticsearch,FTP,Telnet,WinRM,VNC,SVN,Tomcat,WebLogic,Jboss,Zookeeper,Socks5,SNMP,WMI,LDAP,LDAPS,SMTP,POP3,IMAP,SMTP_SSL,IMAP_SSL,POP3_SSL,RouterOS,WebBasicAuth,Webdav,CobaltStrike等。
 
 5、实现了编码解码、哈希计算、加密解密、国密算法、数据格式化、其他转换等共36种类型，其中编码解码类8种、哈希计算13种、加密解密9种、国密算法3种、数据格式化9种、其他2种。包含了AES、RSA、SM2、SM4、DES、3DES、Xor、RC4、Rabbit、Base64、Base32、URL、ASCII、各进制转换、字符串与进制转换、HTML、Unicode、MD5、Hmac、SM3、SHA1、SHA2、SHA3、NTLM、JSON格式化与压缩、XML格式化与压缩、IP地址与整数互转、String.fromCharCode、Unix时间戳互转、文本去除重复行、字母大小写、生成各类随机字符串、字符串反转、JWT解析与弱密码、一键解密OA等。
 
@@ -66,14 +66,16 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
     * [软件下载及更新](#1软件下载及更新)
     * [Welcome](#2Welcome)
     * [项目管理](#3项目管理)
-    * [端口扫描](#4端口扫描)
-    * [URL探测](#5URL探测)
-    * [域名枚举](#6域名枚举)
-    * [POC检测](#7POC检测)
-    * [密码破解](#8密码破解)
-    * [空间测绘](#9空间测绘)
-    * [编码解码](#10编码解码)
-    * [轻武器库](#11轻武器库)
+    * [信息搜集](#4信息搜集)
+    * [端口扫描](#5端口扫描)
+    * [URL探测](#6URL探测)
+    * [域名枚举](#7域名枚举)
+    * [POC检测](#8POC检测)
+    * [密码破解](#9密码破解)
+    * [Awvs扫描](#10Awvs扫描)
+    * [空间测绘](#11空间测绘)
+    * [编码解码](#12编码解码)
+    * [轻武器库](#13轻武器库)
         * 【目录枚举】
         * 【UrlFinder】
         * 【Host碰撞】
@@ -81,20 +83,21 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
         * 【Jwt解码及破解】
         * 【IP归属查询】
         * 【代理池功能】
-    * [红队命令](#12红队命令)
+    * [红队命令](#14红队命令)
         * 【红队命令】
         * 【下载命令】
         * 【Websehll】
         * 【java编码】
         * 【反弹shell】
         * 【CS上线】
-    * [辅助工具](#13辅助工具)
+    * [辅助工具](#15辅助工具)
         * 【资产分拣】
         * 【密码生成】
         * 【密码查询】
         * 【提权辅助】
         * 【杀软查询】
-    * [其他功能](#14其他功能)
+    * [其他功能](#16其他功能)
+        * 【AI辅助分析】
         * 【导出功能】
         * 【数据库管理】
         * 【配置管理】
@@ -108,6 +111,26 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
+v3.0.0 【2025.09.23】 增加Awvs扫描功能、项目管理支持定时任务等
+
+v2.9.9 【2025.09.03】 针对poc、js结果增加AI辅助分析功能
+
+v2.9.8 【2025.08.21】 JsFinder多个功能优化 、ICP备案信息批量功能优化等
+
+v2.9.7 【2025.08.20】 增加项目中断后继续扫描功能、主动指纹探测策略优化
+
+v2.9.6 【2025.08.12】 信息搜集增加域名及ip归属地查询、JsFinder爬虫优化
+
+v2.9.5 【2025.07.28】 信息搜集功能与项目管理集成、优化jsfinder功能
+
+v2.9.4 【2025.07.16】 修复密码爆破闪退、项目列表刷新异常、SN导致闪退等Bug
+
+v2.9.3 【2025.07.10】 修复密码破解联动、资产分拣、资产测绘等多个Bug
+
+v2.9.2 【2025.07.01】 增加达梦数据库、ActiveMQ、RabbitMQ等服务破解 
+
+v2.9.1 【2025.06.23】 端口扫描增加防火墙检测选项、增加标题Slogan等
+
 v2.9.0 【2025.06.16】 正式上线信息搜集模块和ICP备案信息批量查询功能
 
 v2.8.4 【2025.06.13】 空间测绘API支持多个key轮询及多条件查询
@@ -116,7 +139,7 @@ v2.8.3 【2025.06.08】 增加免费代理爬取功能、ICMP和PING存活探测
 
 v2.8.2 【2025.05.30】 修复Poc前端bug、RDP密码破解异常等
 
-v2.8.1版 【2025.05.16】 修复TC扫描bug、jwt解码bug、资产测绘hearder等
+v2.8.1 【2025.05.16】 修复TC扫描bug、jwt解码bug、资产测绘hearder等
 
 v2.8.0 【2025.05.07】 优化线程动态调整策略、新增内置poc、可导出xls和html等
 
@@ -289,7 +312,17 @@ Windows运行时依赖 [Microsoft WebView2](https://developer.microsoft.com/en-u
 
 <div align=center><img src=images/image-20240327160956342.png width=80% ></div>
 
-#### 4、端口扫描
+#### 4、信息搜集
+
+信息搜集模块内置了多个API查询接口，需要配置cookie的有四项（爱站、站长之家、风鸟、beianx），配置cookie后能搜集到更全面的信息，并可对cookie有效性进行验证。
+
+<div align=center><img src=images/image-20250630220227586.png  width=80% ></div>
+
+**【结果展示】**
+
+<div align=center><img src=images/image-20250630220243785.png  width=80% ></div>
+
+#### 5、端口扫描
 
 对目标IP进行存活探测、端口开放探测、端口服务识别、Banner识别等，可识别100余种服务和协议。
 
@@ -341,7 +374,7 @@ Socks5代理格式：socks5://10.10.10.10:8081  或 socks5://user:pass@10.10.10.
 
 <div align=center><img src=images/image-20231221133246236.png width=80% ></div>
 
-#### 5、URL探测
+#### 6、URL探测
 
 TscanPlus目前整合指纹2.6W余条，经多次优化，有效提高了资产发现的协程并发效率，对1万个web系统进行指纹识别仅需8-10分钟，在效率和指纹覆盖面方面应该是目前较高的了。
 
@@ -374,7 +407,7 @@ TscanPlus自v2.1版本后，支持自定义指纹，包括被动指纹和主动�
 
 <div align=center><img src=images/image-20231221133907830.png width=80% ></div>
 
-#### 6、域名枚举
+#### 7、域名枚举
 
 在域名枚举方面TscanPlus集成了多种功能，可以使用字典枚举，也可以使用多个免费接口进行查询。
 
@@ -397,7 +430,7 @@ tidesec.com.cn
 
 <div align=center><img src=images/image-20240110164454188.png width=80% ></div>
 
-#### 7、POC检测
+#### 8、POC检测
 
 TscanPlus内置了部分POC，并进行了Level分类，Level1是最常见、使用频率最高的POC，Level2是较通用的POC，Level3为不太常见POC。
 
@@ -440,9 +473,9 @@ Nuclei的poc会默认下载到用户文件夹下的nuclei-templates目录，本�
 
 <div align=center><img src=images/image-20231221135024558.png width=80% ></div>
 
-#### 8、密码破解
+#### 9、密码破解
 
-TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网弱口令进行排查，为提高检测效率，优选并精简每个服务的用户名和密码字典。覆盖的服务包括：SSH,RDP,SMB,MYSQL,SQLServer,Oracle,MongoDB,Redis,PostgreSQL,MemCached,Elasticsearch,FTP,Telnet,WinRM,VNC,SVN,Tomcat,WebLogic,Jboss,Zookeeper,Socks5,SNMP,WMI,LDAP,LDAPS,SMTP,POP3,IMAP,SMTP_SSL,IMAP_SSL,POP3_SSL,RouterOS,WebBasicAuth,Webdav,CobaltStrike等。
+TscanPlus内置48种常见服务的弱口令破解，可方便管理员对内网弱口令进行排查，为提高检测效率，优选并精简每个服务的用户名和密码字典。覆盖的服务包括：SSH,RDP,SMB,MYSQL,SQLServer,Oracle,MongoDB,Redis,PostgreSQL,MemCached,Elasticsearch,FTP,Telnet,WinRM,VNC,SVN,Tomcat,WebLogic,Jboss,Zookeeper,Socks5,SNMP,WMI,LDAP,LDAPS,SMTP,POP3,IMAP,SMTP_SSL,IMAP_SSL,POP3_SSL,RouterOS,WebBasicAuth,Webdav,CobaltStrike等。
 
 **【任务配置】**
 
@@ -468,7 +501,33 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 
 
-#### 9、空间测绘
+#### 10、Awvs扫描 
+
+无影已经内置了poc检测、密码破解、目录枚举等功能，但常规web漏洞扫描方面一直举棋未定，最终还是自研和对接商用软件中选择了对接成熟的扫描工具——Awvs。
+
+而Awvs作为一款成熟的商业漏洞扫描器，拥有强大的漏洞检测能力和爬虫功能，在网络安全行业中被广泛应用于企业安全评估、渗透测试前期信息收集以及Web应用例行安全检查等场景。
+
+配置好Awvs和API key，连接测试通过后，即可进行站点扫描。
+
+<div align=center><img src=images/image-20250923145127079.png  width=80% ></div>
+
+可查看漏洞和爬虫链接信息
+
+<div align=center><img src=images/image-20250923151532948.png  width=80% ></div>
+
+支持其他功能的右键联动
+
+<div align=center><img src=images/image-20250923145725713.png  width=80% ></div>
+
+目前Awvs接口测试主要是采用v25.1版本，对之前版本的兼容性可能一般，所以可能需要下载使用较新的Awvs。工具上也有docker镜像推荐：
+
+<div align=center><img src=images/image-20250923145829960.png  width=80% ></div>
+
+另外提醒一下，Awvs对企业使用盗版软件的追究力度还是比较大的，所以大家不要使用盗版破解版本。
+
+
+
+#### 11、空间测绘
 
 为使信息搜集更快捷方便，TscanPlus集成了多个网络空间测绘接口，包括鹰图**Hunter、Fofa、shodan、360 Quake、Zoomeye 钟馗之眼、Censys、微步在线ThreatBook、BinaryEdge、VirusTotal**等9个主流空探API，可根据域名、IP地址、端口、应用、服务等进行检索，并对各网络空探结果进行去重整合。
 
@@ -496,7 +555,11 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20241018143704418.png width=80% ></div>
 
-#### 10、编码解码
+无影支持9种常见的空间测绘引擎的单独使用和数据聚合，目前也均已支持多key轮询，以防单key容易触发风控。且各种查询条件均支持多条语句同时查询。
+
+<div align=center><img src=images/image-20250630230101101.png  width=80% ></div>
+
+#### 12、编码解码
 
 编解码功能模块实现了编码解码、哈希计算、加密解密、国密算法、数据格式化、其他转换等共36种类型，其中编码解码类8种、哈希计算13种、加密解密9种、国密算法3种、数据格式化9种、其他2种。
 
@@ -552,7 +615,7 @@ TscanPlus内置34种常见服务的弱口令破解，可方便管理员对内网
 
 <div align=center><img src=images/image-20240617181132609.png width=80% ></div>
 
-#### 11、轻武器库
+#### 13、轻武器库
 
 ##### 【目录枚举】
 
@@ -640,7 +703,7 @@ Host碰撞通过修改Host字段来发送数据包，该功能可对 IP和域名
 
 #### 
 
-#### 12、红队命令
+#### 14、红队命令
 
 TscanPlus内置常用红队命令，包括Win内网(凭证获取、权限维持、横向移动)命令26类、Linux内网命令18类、下载命令31条。内置各类反弹shell命令85条、MSF生成命令21条、CS免杀上线命令等，可根据shell类型、操作系统类型、监听类型自动生成代码。
 
@@ -702,7 +765,7 @@ CS上线配置CS Payload地址后，即可生成相应代码。
 
 <div align=center><img src=images/image-20231221141838825.png width=80% ></div>
 
-#### 13、辅助工具
+#### 15、辅助工具
 
 TscanPlus内置资产分拣、Windows提权辅助、杀软查询等工具。
 
@@ -738,8 +801,27 @@ TscanPlus内置资产分拣、Windows提权辅助、杀软查询等工具。
 
 <div align=center><img src=images/image-20231221142616501.png width=80% ></div>
 
+#### 16、其他功能
 
-#### 14、其他功能
+#####   **【AI辅助分析】**
+
+针对poc、js结果增加AI辅助分析功能，方便对发现的漏洞进行智能化分析
+
+<div align=center><img src=images/image-20250923150248850.png  width=80% ></div>
+
+可添加大模型并配置 AI 选项，无影内置了两个免费的Key，经测试来看，免费的key也可以满足场景需求。
+
+<div align=center><img src=images/image-20250923150412924.png  width=80% ></div>
+
+开启 AI 选项后，在检测 Poc 和 JS 时会自动调用 AI 进行分析。
+
+<div align=center><img src=images/image-20250923150845112.png  width=80% ></div>
+
+右键可查看AI分析结果 
+
+<div align=center><img src=images/image-20250923151114294.png  width=80% ></div>
+
+
 
 #####  **【导出功能】**
 
