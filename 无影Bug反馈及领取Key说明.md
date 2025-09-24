@@ -47,7 +47,7 @@
   <tr>
     <td style="width:50%; border:1px solid black; vertical-align:top; padding:10px;">
        <br>
-<b> v3.0.0版 【2025.09.23】 
+<b> v3.0.0版 【2025.09.23】 </b>  <br>
 	1、增加Awvs扫描功能 @天明 <br>
 	2、项目管理支持定时任务 @秋茶- <br>
 	3、jwt编码支持多种密钥编码 @树先生  <br>
@@ -1126,6 +1126,7 @@
    </td>
   </tr>
 </table>
+
 
 
 
