@@ -1065,11 +1065,13 @@ apt-get remove libturbojpeg0
 
 在个别电脑上打开后，只能看到TscanPlus的中间部分，看不到上方标签栏，这可能是由于电脑分辨率较低或设置了缩放率而导致。这时需要将分辨率修改为1440*1080以上，同时将缩放率修改为100%即可。
 
-<div align=center><img src=images/image-20260430111534650.png  width=60% >
+<div align=center><img src=images/image-20260430111534650.png  width=60% ></div>
+
 
 如果按上面的调整后，还是显示不全，那么可以排查下【辅助功能——文本大小】，设置最小显示。
 
-<div align=center><img src=images/image-20260430111839425.png  width=60% >
+<div align=center><img src=images/image-20260430111839425.png  width=60% ></div>
+
 
 
 **7、运行时提示配置文件不完整的问题**
