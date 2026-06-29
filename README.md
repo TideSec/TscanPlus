@@ -1008,11 +1008,13 @@ Wails打包的程序在Windows上运行时依赖 [Microsoft WebView2](https://de
 
 **（4）重装后仍无法打开的情况**
 
-如果在webview2重装后仍无法打开，没有任何提示，可能是webview2和某些特定版本的windows系统再加上wails的go-webview2库融合导致的Bug，为此，在这里专门打包了一个针对webview2问题的改进版，可以尝试一下。
+如果在webview2重装后仍无法打开，没有任何提示，可能是webview2和某些特定版本的windows系统再加上wails的go-webview2库融合导致的Bug。这里推荐一个相对兼容性好一些的webview2版本——**WebView2 Runtime 133.0.3065.92**。
 
-<div align=center><img src=https://github.com/user-attachments/assets/15d0c7f2-76c1-4359-8556-8f5232158f2b width=70% ></div>
+下载地址：[https://github.com/westinyang/WebView2RuntimeArchive/releases/tag/133.0.3065.92](https://github.com/westinyang/WebView2RuntimeArchive/releases/tag/133.0.3065.92)
 
-<div align=center><img src=https://github.com/user-attachments/assets/f5a0bd0a-2c26-45f9-96e0-4471b7e0db83 width=70% ></div>
+先用上面的【Windows11轻松设置】工具彻底卸载webview2，然后根据自己的系统选择x64或Arm即可，下载后安装即可。
+
+成功安装后再用【Windows11轻松设置】看下当前全局版本是否为133.0.3065.92，版本正确之后再尝试打开无影。
 
 **4、Linux版运行报错**
 
