@@ -111,7 +111,7 @@ https://github.com/TideSec/TscanPlus/assets/46297163/0f8cff21-6c33-4da3-bb6d-5f3
 
 感谢各位师傅提出的宝贵修改建议和诸多bug！
 
-v3.3.0 【2026.06.01】整合GUI图形版和命令行版，上线MCP功能
+v3.3.0 【2026.06.01】整合GUI图形版和命令行版，上线MCP功能 
 
 v3.2.9 【2026.05.16】增加Interactsh版本及搭建说明 
 
