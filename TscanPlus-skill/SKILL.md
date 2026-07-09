@@ -177,13 +177,40 @@ POC 路径在 `config.yaml`（xray 1.0 格式），与 GUI 一致。
 
 ### 8. 空间测绘 `cyber_search`（`cyber`）
 
+与 GUI「空间测绘」页字段下拉一致；`field` 决定如何把 `query` 转成各引擎 API 语句。
+
 | MCP 参数 | CLI | 默认 | 说明 |
 |----------|-----|------|------|
-| `query` | `-ck` | 必填 | 如 `domain="example.com"`、`ip="1.1.1.1"` |
-| `field` | 查询类型 | `custom` | `ip` / `domain` / `custom` |
+| `query` | `-ck` | 必填 | 见下表「query 写法」 |
+| `field` | 查询类型 | `domain` | 见下表 |
 | `engines` | — | config 已启用 | 逗号分隔引擎名 |
+| `project` / `fresh_project` | `-pr` | `MCP` / `false` | 同通用参数 |
+| `include_results` / `result_limit` | — | `true` / `200` | 同通用参数 |
 
-`tscan_scan` 中用 `cyber_query` 传 `-ck` 语句，`cyber_field` 传字段类型。
+**`field` 可选值（对齐 GUI）：**
+
+| `field` | GUI 名称 | `query` 示例（不加引号） |
+|---------|----------|-------------------------|
+| `domain` | 域名 | `example.com` |
+| `ip` | IP 地址 | `1.1.1.1`、`192.168.1.0/24` |
+| `port` | 端口 | `80`、`3306` |
+| `product` | 应用 | `nginx`、`apache` |
+| `title` | 标题 | `管理后台` |
+| `service` | 服务 | `mysql`、`ssh` |
+| `cert` | 证书 | 证书关键词 |
+| `icp` | 备案 | 备案号或主体名 |
+| `body` | Body | 页面正文关键词 |
+| `icon` | Icon | Icon URL 或 hash |
+| `custom` | 自定义 | 各平台完整语法，如 `domain="example.com" && port="443"` |
+
+**用法要点：**
+
+- **推荐**：选具体 `field`，`query` 只填关键词（与 GUI 搜索框相同），不要写 `domain="xxx"` 这类包装语法。
+- **`custom`**：各测绘平台语法不同，一般无法跨平台通用；需自行按平台调试。
+- **多关键词**：逗号分隔，如 `example.com,example.net`（与 GUI 一致）。
+- CLI `-ck` 常写完整语句时，MCP 应设 `field=custom`；或 `-ck example.com` 配合默认 `domain`。
+
+`tscan_scan` 中用 `cyber_query` 传查询内容，`cyber_field` 传上表字段类型（默认 `domain`）。
 
 ### 9. 综合扫描 `tscan_scan`
 
@@ -257,10 +284,27 @@ result_limit: 200
 }
 ```
 
-### SSE（HTTP）
+### Streamable HTTP（推荐远程传输）
 
 ```bash
 TscanPlus mcp serve -listen 127.0.0.1:8088
+# 或显式指定：-transport streamable
+```
+
+```json
+{
+  "mcpServers": {
+    "tscanplus": {
+      "url": "http://127.0.0.1:8088/mcp"
+    }
+  }
+}
+```
+
+### HTTP+SSE（旧版兼容）
+
+```bash
+TscanPlus mcp serve -listen 127.0.0.1:8088 -transport sse
 ```
 
 ```json
@@ -273,7 +317,7 @@ TscanPlus mcp serve -listen 127.0.0.1:8088
 }
 ```
 
-GUI：**AI 辅助 → 启动 MCP 服务** 可启停 SSE 并导出 Skill 模板 zip。
+GUI：**AI 辅助 → MCP 服务配置** 可选择传输模式（Streamable HTTP / HTTP+SSE），启停服务并导出 Skill 模板 zip。
 
 各宿主引用见 [README.md](README.md)。
 
@@ -305,7 +349,7 @@ GUI：**AI 辅助 → 启动 MCP 服务** 可启停 SSE 并导出 Skill 模板 z
 |------|------|
 | 看不到 TscanPlus 工具 | 检查 MCP 配置、二进制绝对路径、重载 MCP |
 | 长时间无响应 | 同步阻塞扫描；缩小 `ports`/`targets`，先关 POC/爆破 |
-| 卡在 `xxx open` | 升级版本；SSE 重启 `mcp serve` |
+| 卡在 `xxx open` | 升级版本；重启 `mcp serve` 或 GUI 内 MCP 服务 |
 | GUI 无 MCP 项目行 | 单工具可能不写 `project` 表；查库表或改用 `tscan_scan` |
 | 测绘/子域无结果 | 检查 `config.yaml` 中 API Key、Engines |
 | 结果与 GUI 不一致 | 共用同一 `config.yaml` / `config.db` |
@@ -325,6 +369,7 @@ TscanPlus -pr MyProject -m port,url,poc -h 192.168.1.1
 
 TscanPlus mcp stdio
 TscanPlus mcp serve -listen 127.0.0.1:8088
+TscanPlus mcp serve -listen 127.0.0.1:8088 -transport sse
 ```
 
 CLI 不自动清空项目；MCP 未指定 `project` 时默认 `MCP` 且每次调用前清空。

@@ -98,7 +98,7 @@ tscanplus-mcp-skill/
 
 1. **MCP：** 按 `mcp-config-example.json` 配置 `mcpServers`，推荐 `stdio`。
 2. **行为：** 将解压后的 `SKILL.md` 作为系统提示附件，或写入自有 Agent 策略 YAML。
-3. **SSE：** `TscanPlus mcp serve -listen 127.0.0.1:8088`，客户端填 `http://127.0.0.1:8088/sse`。
+3. **HTTP：** 默认 Streamable HTTP：`TscanPlus mcp serve -listen 127.0.0.1:8088`，客户端填 `http://127.0.0.1:8088/mcp`；旧客户端可用 `-transport sse`，填 `http://127.0.0.1:8088/sse`。
 
 ### 无 Skill、仅 MCP
 

@@ -104,11 +104,11 @@ thread: 200
 
 ### 示例 2-1：单 URL 指纹
 
-**用户：** 识别 http://test.lab:8080 的 Web 指纹。
+**用户：** 识别 http://test.com:8080 的 Web 指纹。
 
 ```yaml
 tool: url_scan
-targets: "http://test.lab:8080"
+targets: "http://test.com:8080"
 finger: tiny
 web_timeout: 10
 poc_check: false
@@ -116,7 +116,7 @@ thread: 30
 include_results: true
 ```
 
-**CLI：** `TscanPlus -m url -u http://test.lab:8080 -finger tiny`
+**CLI：** `TscanPlus -m url -u http://test.com:8080 -finger tiny`
 
 ---
 
@@ -140,13 +140,13 @@ include_results: true
 
 ```yaml
 tool: url_scan
-targets: "http://internal.lab/admin/"
+targets: "http://internal.com/admin/"
 cookie: "session=abc123; token=xyz"
 finger: tiny
 web_timeout: 15
 ```
 
-**CLI：** `TscanPlus -m url -u http://internal.lab/admin/ -cookie "session=abc123"`
+**CLI：** `TscanPlus -m url -u http://internal.com/admin/ -cookie "session=abc123"`
 
 ---
 
@@ -170,7 +170,7 @@ thread: 30
 
 ```yaml
 tool: url_scan
-targets: "http://target.lab"
+targets: "http://target.com"
 proxy: "http://127.0.0.1:8080"
 finger: all
 ```
@@ -183,13 +183,13 @@ finger: all
 
 ```yaml
 tool: poc_scan
-targets: "http://test.lab"
+targets: "http://test.com"
 thread: 20
 poc_full: false
 include_results: true
 ```
 
-**CLI：** `TscanPlus -m poc -u http://test.lab`
+**CLI：** `TscanPlus -m poc -u http://test.com`
 
 ---
 
@@ -212,13 +212,13 @@ thread: 15
 
 ```yaml
 tool: poc_scan
-targets: "http://vuln.lab"
+targets: "http://vuln.com"
 poc_full: true
 thread: 10
 poc_level: "1+2+3"
 ```
 
-**CLI：** `TscanPlus -m poc -u http://vuln.lab -full -poclevel 1+2+3`
+**CLI：** `TscanPlus -m poc -u http://vuln.com -full -poclevel 1+2+3`
 
 ---
 
@@ -230,7 +230,7 @@ Agent：分批逗号传入（每批 ≤20），或建议用户改用 CLI `-uf ur
 
 ```yaml
 tool: poc_scan
-targets: "http://a.lab,http://b.lab"
+targets: "http://a.com,http://b.com"
 thread: 20
 ```
 
@@ -324,12 +324,12 @@ ports: "80,443,8080"
 
 ```yaml
 tool: subdomain_scan
-domains: "target.lab"
+domains: "target.com"
 sub_dict: "/path/to/subdomains.txt"
 sub_api: false
 ```
 
-**CLI：** `TscanPlus -m domain -d target.lab -dc /path/to/subdomains.txt`
+**CLI：** `TscanPlus -m domain -d target.com -dc /path/to/subdomains.txt`
 
 ---
 
@@ -339,13 +339,13 @@ sub_api: false
 
 ```yaml
 tool: dir_scan
-urls: "http://test.lab"
+urls: "http://test.com"
 thread: 30
 timeout: 5
 include_results: true
 ```
 
-**CLI：** `TscanPlus -m dir -u http://test.lab`
+**CLI：** `TscanPlus -m dir -u http://test.com`
 
 ---
 
@@ -353,12 +353,12 @@ include_results: true
 
 ```yaml
 tool: dir_scan
-urls: "https://test.lab"
+urls: "https://test.com"
 dict: "/path/to/dirlist.txt"
 thread: 50
 ```
 
-**CLI：** `TscanPlus -m dir -u https://test.lab -dd /path/to/dirlist.txt -ds 50`
+**CLI：** `TscanPlus -m dir -u https://test.com -dd /path/to/dirlist.txt -ds 50`
 
 ---
 
@@ -368,12 +368,12 @@ thread: 50
 
 ```yaml
 tool: js_scan
-urls: "https://test.lab"
+urls: "https://test.com"
 timeout: 10
 include_results: true
 ```
 
-**CLI：** `TscanPlus -m js -u https://test.lab -wt 10`
+**CLI：** `TscanPlus -m js -u https://test.com -wt 10`
 
 ---
 
@@ -381,7 +381,7 @@ include_results: true
 
 ```yaml
 tool: js_scan
-urls: "https://a.lab,https://b.lab"
+urls: "https://a.com,https://b.com"
 proxy: "socks5://127.0.0.1:1080"
 ```
 
@@ -391,16 +391,16 @@ proxy: "socks5://127.0.0.1:1080"
 
 > 须在 `config.yaml` 配置 Hunter/FOFA 等引擎与 Key。
 
-### 示例 8-1：按域名查资产
+### 示例 8-1：按域名查资产（与 GUI 相同）
 
 ```yaml
 tool: cyber_search
-query: 'domain="example.com"'
+query: example.com
 field: domain
 include_results: true
 ```
 
-**CLI：** `TscanPlus -m cyber -ck 'domain="example.com"'`
+**CLI：** `TscanPlus -m cyber -ck example.com`（或完整语法 `-ck 'domain="example.com"'` 时需 `field=custom`）
 
 ---
 
@@ -408,19 +408,31 @@ include_results: true
 
 ```yaml
 tool: cyber_search
-query: 'ip="192.168.1.0/24"'
+query: 192.168.1.0/24
 field: ip
 ```
 
 ---
 
-### 示例 8-3：指定引擎
+### 示例 8-3：按标题查（指定引擎）
 
 ```yaml
 tool: cyber_search
-query: 'title="管理"'
-field: custom
+query: 管理后台
+field: title
 engines: "hunter,fofa"
+include_results: true
+```
+
+---
+
+### 示例 8-4：自定义平台语法
+
+```yaml
+tool: cyber_search
+query: 'domain="example.com" && port="443"'
+field: custom
+engines: "fofa"
 ```
 
 ---
@@ -503,14 +515,14 @@ include_results: true
 
 ```yaml
 tool: tscan_scan
-targets: "http://test.lab,http://api.test.lab"
+targets: "http://test.com,http://api.test.com"
 modules: "url,poc,dir,js"
 finger: tiny
 dir_thread: "30"
 include_results: true
 ```
 
-**CLI：** `TscanPlus -m url,poc,dir,js -u http://test.lab,http://api.test.lab`
+**CLI：** `TscanPlus -m url,poc,dir,js -u http://test.com,http://api.test.com`
 
 ---
 
@@ -518,15 +530,15 @@ include_results: true
 
 ```yaml
 tool: tscan_scan
-targets: 'domain="target.lab"'
-cyber_query: 'domain="target.lab"'
+targets: target.com
+cyber_query: target.com
 cyber_field: domain
 modules: "cyber,port,url"
 ports: "Top100"
 thread: "300"
 ```
 
-**CLI：** `TscanPlus -m cyber,port,url -ck 'domain="target.lab"'`
+**CLI：** `TscanPlus -m cyber,port,url -ck target.com`
 
 ---
 
